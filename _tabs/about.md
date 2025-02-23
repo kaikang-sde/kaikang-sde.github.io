@@ -12,4 +12,5 @@ As a Software Engineer, I thrive on tackling complex challenges and crafting imp
 
 I’m always open to interesting conversations and collaboration. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/kaikangsde/)!
 
+![tangled](/assets/img/personal/tangled.png){: w="600" h="300" }
 
