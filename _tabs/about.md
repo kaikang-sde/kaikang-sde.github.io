@@ -4,11 +4,15 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi, I’m Anqi Kang, though I prefer to go by Kai Kang. I hold a Master’s degree in Computer Information Systems from [Colorado State University](https://www.colostate.edu/) in the United States.
+Hi, I’m **Anqi Kang**, though I prefer to go by **Kai Kang**. I hold a Master’s degree in Computer Information Systems from [Colorado State University](https://www.colostate.edu/).
 
-My journey into technology is anything but conventional — I started as a Sneaker Custom Artist before transitioning into Software Engineering. This creative background has given me a unique perspective on problem-solving, allowing me to blend artistry with technical expertise. From designing personalized artwork to developing innovative software solutions, I’ve cultivated a strong skill set in creative problem-solving, effective communication, and collaborative teamwork.
+As a former Sneaker Custom Artist turned Software Engineer, I bring a unique perspective to problem-solving by blending creativity with technical expertise. My journey from designing personalized art to developing innovative software solutions has equipped me with a diverse skill set, including effective communication, project organization, and collaborative teamwork.
 
-As a Software Engineer, I thrive on tackling complex challenges and crafting impactful solutions. My artistic roots inspire me to think outside the box, while my technical training ensures I build scalable and efficient systems. I’m continuously honing my skills, staying ahead of emerging tech trends, and pushing the boundaries of what’s possible.
+Transitioning into the tech industry, I’ve embraced the challenge of building meaningful experiences through technology. My artistic background fosters a creative approach to tackling complex problems, while my technical training ensures precise, scalable solutions.
+
+Currently, I am thriving as a Software Engineer, continuously honing my skills and staying ahead of emerging trends in technology. With a passion for learning and innovation, I am dedicated to delivering impactful projects that drive results and create value for users.
+
+Learning! Keep learning! Relearning! 
 
 I’m always open to interesting conversations and collaboration. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/kaikangsde/)!
 
