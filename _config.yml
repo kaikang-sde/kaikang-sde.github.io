@@ -132,10 +132,10 @@ comments:
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled: # boolean, keep empty means false
+    enabled: true # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env: # [development | production]
+    env: development # [development | production]
 
 pwa:
   enabled: true # The option for PWA feature (installable)
@@ -147,6 +147,11 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
+collections:
+  tabs:
+    output: true
+    sort_by: order
+    
 paginate: 10
 
 # The base URL of your site
