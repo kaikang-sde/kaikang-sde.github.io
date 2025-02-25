@@ -1,5 +1,5 @@
 ---
-title: Basic of Computer Networking
+title: Basic Concepts of Computer Networking
 date: 2025-02-22 20:19
 categories: [Architecture, Computer Networking]
 tags: [computer networking]
@@ -9,45 +9,51 @@ author: kai
 # Computer Network Models
 
 ## OSI - 7 Layers and TCP/IP - 4 Layers
-The **Open Systems Interconnection** (OSI) model is a 7-layer conceptual framework.
 
-The **Transmission Control Protocol/Internet Protocol** (TCP/IP) model is a 4-layer practical implementation used in real-work networking, including the Internet.
+The **Open Systems Interconnection (OSI)** model is a conceptual framework that standardizes networking functions into **seven layers**.
 
+The **Transmission Control Protocol/Internet Protocol (TCP/IP)** model is a more practical, real-world implementation with **four layers**, forming the foundation of the Internet.
+
+### **Comparison of Network Models**
 <ul>
-  <li><strong>Application Layer:</strong> Responsible for the communication between applications, such as HTTP, FTP, DNS, etc</li>
-  <li><strong>Transport Layer:</strong> Responsible for data transmission between two hosts and end-to-end communication, such as TCP, UDP, etc</li>
-  <li><strong>Internet Layer:</strong> Responsible for packet encapsulation, addressing, and routing, such as IP, etc</li>
-  <li><strong>Network Access Layer:</strong> Responsible for transmitting network packets in the physical network, such as MAC address translation and transmitting network data frames through network interface, etc.</li>
+  <li><strong>Application Layer:</strong> Manages communication between applications, supporting protocols like HTTP, FTP, and DNS.</li>
+  <li><strong>Transport Layer:</strong> Handles end-to-end communication between hosts, ensuring reliable or fast data transfer through TCP and UDP.</li>
+  <li><strong>Internet Layer:</strong> Responsible for packet encapsulation, addressing, and routing, using protocols such as IP.</li>
+  <li><strong>Network Access Layer:</strong> Manages physical network communication, including MAC address translation and data transmission via network interfaces.</li>
 </ul>
 
-![Networking Models](/assets/img/posts/architecture/network%20model.png)
+![Networking Models](/assets/img/posts/architecture/NetworkModel.png)
 
-### Why layers?
+---
+
+### Why Use Layers?
+
 {% capture why_layer %}why-layer{% endcapture %}
 <details id="{{ why_layer }}">
-  <summary><strong>No Layers</strong></summary>
-  <p>
-    - The application transfers data into binary and requires writing code to manipulate MAC to send data.<br>
-    - More code is needed to establish networking connections, handle addressing, ensure reliable transmission, and manage failure retransmission, etc.
-  </p>
+  <summary><strong>Without Layered Architecture</strong></summary>
+  <pre>
+  - Applications must handle low-level networking tasks, such as converting data to binary and controlling MAC address transmission.
+  - Developers need to write additional code for networking operations, including connection management, addressing, reliability, and retransmission.
+  </pre>
 </details>
+
 <details id="{{ why_layer }}">
-  <summary><strong>Layers</strong></summary>
-   <p>
-    - Each layer has a clear division of responsibility. (Single Responsibility and Chain of Responsibility Pattern)<br>
-    - Developers are responsible for writing <strong>application-layer</strong> business logic.<br>
-    - The OS is responsible for establishing newtwork connection and reliable transmission.<br>
-    - Switches and routers are responsible for transmitting binary data over the physical medium.
-    </p>
+  <summary><strong>With Layered Architecture</strong></summary>
+  <pre>
+  - Each layer has a clearly defined responsibility, following the Single Responsibility and Chain of Responsibility design patterns.
+  - Developers focus on writing application-layer business logic without managing low-level network operations.
+  - The operating system handles network connections and ensures reliable data transmission.
+  - Network devices (switches, routers) manage the transmission of binary data over the physical network.
+  </pre>
 </details>
 
-
-More on editing...
-
-
+### Encapsulated packets like nested dolls
+![Networking Models](/assets/img/posts/architecture/SimpleNetworkPacketFormat.png)
 
 
 
 
 
+---
 
+Stay tuned for more insights into networking fundamentals!
