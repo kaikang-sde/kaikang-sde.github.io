@@ -1,6 +1,6 @@
 ---
-title: Algorithm
-date: 2025-03-04 08:14
+title: Arrays in Java
+date: 2025-03-03
 categories: [Algorithm, Array]
 tags: [Array, Java]
 author: kai
@@ -15,40 +15,22 @@ An **array** is a data structure that stores multiple values of the same type in
 - Elements in an array are accessed using an **index**, starting from `0`.
 - Arrays can store **primitive data types** (`int`, `double`, `char`, etc.) or **objects** (`String`, `Integer`, `CustomClass`, etc.).
 
-### Example: Declaring and Initializing an Array
-```java
-// Declare and initialize an integer array
-int[] numbers = {10, 20, 30, 40, 50};
 
-// Accessing array elements
-System.out.println(numbers[0]); // Output: 10
-
-// Modifying an array element
-numbers[1] = 25;
-System.out.println(numbers[1]); // Output: 25
-
-// Array length
-System.out.println(numbers.length); // Output: 5
-```
-
----
-
-## 2. When to Use an Array?
+## When
 Use arrays when:
 - You need to store multiple elements of the same type.
 - The number of elements is **fixed** or known in advance.
 - You want **fast access** to elements using an index (`O(1)` time complexity).
 - You need to perform operations like sorting, searching, and iteration over a collection of values.
 
-### Example Use Cases
+#### Example Use Cases
 - **Managing student grades:** `int[] grades = {85, 90, 78, 92};`
 - **Storing a list of temperatures:** `double[] temperatures = new double[7];`
 - **Representing a game board (e.g., chess, tic-tac-toe).**
 - **Processing large datasets where all elements are of the same type.**
 
----
 
-## 3. Why Use an Array?
+## Why
 Arrays are useful because they:
 - Provide **fast access** to elements (`O(1)` time complexity).
 - Store multiple values under a **single variable name**, making code cleaner.
@@ -61,9 +43,9 @@ However, arrays also have **limitations**:
 
 ---
 
-## 4. More About Arrays
+## How - Code Example
 
-### Different Ways to Declare and Initialize Arrays
+#### Different Ways to Declare and Initialize Arrays
 ```java
 // 1. Declare and allocate memory separately
 int[] arr1;
@@ -76,7 +58,7 @@ int[] arr2 = new int[] {1, 2, 3, 4, 5};
 int[] arr3 = {10, 20, 30, 40, 50};
 ```
 
-### Iterating Through an Array
+#### Iterating Through an Array
 ```java
 // Using a for loop
 for (int i = 0; i < numbers.length; i++) {
@@ -89,7 +71,7 @@ for (int num : numbers) {
 }
 ```
 
-### Multidimensional Arrays
+#### Multidimensional Arrays
 ```java
 // 2D Array Declaration
 int[][] matrix = {
@@ -102,7 +84,7 @@ int[][] matrix = {
 System.out.println(matrix[1][2]); // Output: 6
 ```
 
-### Sorting an Array
+#### Sorting an Array
 ```java
 import java.util.Arrays;
 
@@ -112,17 +94,17 @@ Arrays.sort(values); // Sorts in ascending order
 System.out.println(Arrays.toString(values)); // Output: [1, 2, 4, 5, 8]
 ```
 
-### Copying an Array
+#### Copying an Array
 ```java
 // Method 1: Using Arrays.copyOf()
 int[] copy = Arrays.copyOf(numbers, numbers.length);
 
-// Method 2: Using System.arraycopy()
+// Method 2: Using System.arraycopy() - System.arraycopy(sourceArray, sourcePosition, destinationArray, destinationPosition, length);
 int[] newArr = new int[5];
 System.arraycopy(numbers, 0, newArr, 0, numbers.length);
 ```
 
-### Finding Maximum and Minimum in an Array
+#### Finding Maximum and Minimum in an Array
 ```java
 int max = Integer.MIN_VALUE;
 int min = Integer.MAX_VALUE;
@@ -136,7 +118,7 @@ System.out.println("Max: " + max);
 System.out.println("Min: " + min);
 ```
 
-### Using Arrays with Methods
+#### Using Arrays with Methods
 ```java
 // Passing an array to a method
 public static void printArray(int[] arr) {
