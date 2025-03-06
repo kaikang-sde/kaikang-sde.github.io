@@ -5,7 +5,7 @@ refactor: true
 
 {% include lang.html %}
 
-{% assign sorted_posts = site.posts | sort: "date" | reverse%}
+{% assign sorted_posts = site.posts | sort: "date" %}
 {% assign all_pinned = sorted_posts | where: 'pin', 'true' %}
 {% assign all_normal = sorted_posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
 
