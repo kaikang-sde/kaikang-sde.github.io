@@ -1,14 +1,14 @@
 ---
-title: Arrays in Java
+title: Arrays in Java and Python
 date: 2025-03-03
 categories: [Algorithm, Array]
-tags: [Array, Java]
+tags: [Array, Java, Python]
 author: kai
 ---
 
-# Arrays in Jave
+## Arrays in Jave
 
-## What 
+### What 
 An **array** is a data structure that stores multiple values of the same type in a contiguous block of memory. It provides a way to group and manage a collection of elements using a single variable name.
 
 - Arrays in Java are **fixed in size**, meaning their length is determined when they are created and cannot be changed.
@@ -16,7 +16,7 @@ An **array** is a data structure that stores multiple values of the same type in
 - Arrays can store **primitive data types** (`int`, `double`, `char`, etc.) or **objects** (`String`, `Integer`, `CustomClass`, etc.).
 
 
-## When
+### When
 Use arrays when:
 - You need to store multiple elements of the same type.
 - The number of elements is **fixed** or known in advance.
@@ -30,7 +30,7 @@ Use arrays when:
 - **Processing large datasets where all elements are of the same type.**
 
 
-## Why
+### Why
 Arrays are useful because they:
 - Provide **fast access** to elements (`O(1)` time complexity).
 - Store multiple values under a **single variable name**, making code cleaner.
@@ -41,9 +41,9 @@ However, arrays also have **limitations**:
 - **Fixed size:** Once an array is created, its size cannot be changed.
 - **Inefficient insertions and deletions:** Adding or removing elements requires shifting, making it `O(n)` complexity.
 
----
 
-## How - Code Example
+---
+### How - Code Example
 
 #### Different Ways to Declare and Initialize Arrays
 ```java
@@ -118,22 +118,8 @@ System.out.println("Max: " + max);
 System.out.println("Min: " + min);
 ```
 
-#### Using Arrays with Methods
-```java
-// Passing an array to a method
-public static void printArray(int[] arr) {
-    for (int num : arr) {
-        System.out.print(num + " ");
-    }
-}
 
-// Calling the method
-printArray(numbers); // Output: 10 25 30 40 50
-```
-
----
-
-## Summary
+### Summary
 
 | Feature              | Details                                      |
 |----------------------|----------------------------------------------|
@@ -146,6 +132,123 @@ printArray(numbers); // Output: 10 25 30 40 50
 🔹 **Use Arrays when** you need a simple, fixed-size data structure.  
 🔹 **Consider alternatives like `ArrayList`** if you need dynamic resizing.
 
+---
+## Arrays in Python
+
+### What 
+An **array** in Python is a data structure that stores multiple values of the same type in a contiguous block of memory. It provides a way to group and manage a collection of elements using a single variable name.
+
+- Unlike Java, Python does not have built-in **fixed-size arrays**. Instead, it offers:
+  - **`array` module** (fixed-type, memory-efficient arrays)
+  - **NumPy arrays** (optimized for numerical computations)
+- Elements in an array are accessed using an **index**, starting from `0`.
+- Python `array.array` stores **only one data type**, ensuring memory efficiency.
+
+
+### When
+Use arrays when:
+- You need to store multiple elements of the same type.
+- You want **fast access** to elements using an index (`O(1)` time complexity).
+- You need to perform operations like sorting, searching, and iteration efficiently.
+- You want a **fixed-type, memory-efficient** data structure (`array` module or NumPy).
+
+##### Example Use Cases
+- **Managing student grades:** `array('i', [85, 90, 78, 92])`
+- **Storing a list of temperatures:** `array('f', [36.5, 37.0, 36.8])`
+- **Representing a game board (e.g., chess, tic-tac-toe).**
+- **Processing large datasets where all elements are of the same type (NumPy).**
+
+
+### Why
+Arrays are useful because they:
+- Provide **fast access** to elements (`O(1)` time complexity).
+- Store multiple values under a **single variable name**, making code cleaner.
+- Allow **efficient memory management** (especially with `array` and NumPy).
+- Are **more performant** than Python lists when working with large datasets due to optimized memory usage.
+
+However, arrays also have **limitations**:
+- **Fixed-type:** Unlike lists, `array.array` only supports elements of the same type.
+- **Less flexibility:** Insertion and deletion operations are slower compared to Python lists.
+
+
+### How - Code Example
+
+#### Different Ways to Declare and Initialize Arrays
+```python
+from array import array
+
+# 1. Declare and allocate memory separately - 'i' means each element is a signed integer (4 bytes)
+arr1 = array('i', [0] * 5)  # Allocates memory for 5 elements, all initialized to 0
+
+# 2. Declare and initialize in one step - 'f' means each element is a floating point (4 bytes)
+arr2 = array('f', [1.0, 2.0, 3.0, 4.0, 5.0])
+```
+
+#### Iterating Through an Array
+```python
+# Using a for loop
+for i in range(len(arr2)):
+    print(arr2[i])
+
+# Using an enhanced for loop (for-each loop)
+for num in arr2:
+    print(num)
+```
+
+#### Multidimensional Arrays
+```python
+import numpy as np
+
+# 2D Array Declaration
+matrix = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+# Accessing elements
+print(matrix[1, 2])  # Output: 6
+```
+
+#### Sorting an Array
+```python
+arr4 = array('i', [5, 1, 4, 2, 8])
+sorted_arr = array('i', sorted(arr4))
+
+print(sorted_arr)  # Output: array('i', [1, 2, 4, 5, 8])
+```
+
+#### Copying an Array
+```python
+# Method 1: Using list conversion - tolist()
+copy_arr = array('i', arr4.tolist())
+
+# Method 2: Using slicing
+copy_arr2 = array('i', arr4[:])
+```
+
+#### Finding Maximum and Minimum in an Array
+```python
+max_value = max(arr4)
+min_value = min(arr4)
+
+print(f"Max: {max_value}")
+print(f"Min: {min_value}")
+```
+
+### Summary
+
+| Feature              | Details                                      |
+|----------------------|----------------------------------------------|
+| **Type**            | Fixed-type, homogeneous collection (`array.array`) |
+| **Access Time**     | `O(1)` for reading/writing                   |
+| **Insertion/Deletion** | `O(n)` (requires shifting elements)        |
+| **Memory Efficiency** | Stored in contiguous memory locations      |
+| **Use Cases**       | Storing fixed-type collections, fast access needs |
+
+🔹 **Use `array.array` when** you need a memory-efficient, fixed-type data structure.  
+🔹 **Consider `list`** if you need dynamic resizing and support for mixed data types.  
+🔹 **For large-scale numerical operations**, consider using **NumPy arrays (`numpy.array`)** for better performance.
 
 ---
 
