@@ -227,3 +227,5 @@ jekyll-archives:
 
 sitemap: true
 seo: true
+plugins:
+  - jekyll-seo-tag
