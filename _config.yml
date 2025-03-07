@@ -229,5 +229,3 @@ sitemap: true
 seo: true
 plugins:
   - jekyll-seo-tag
-
-google-site-verification: PDfxeQNkFff6jt3nUjYvFR1zS2cZk6D-gtC8-8Jm7Q4
