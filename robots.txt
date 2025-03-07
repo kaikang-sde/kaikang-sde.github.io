@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kaikang-sde.github.io/sitemap.xml
