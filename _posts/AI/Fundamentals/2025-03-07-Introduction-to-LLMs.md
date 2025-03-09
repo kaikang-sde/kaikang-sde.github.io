@@ -1,12 +1,12 @@
 ---
 title: Introduction to LLMs
-date: 2025-03-08
-categories: [AI]
+date: 2025-03-07
+categories: [AI, Fundamentals]
 tags: [AI, LLMs]
 author: kai
 ---
 
-# 🌟 How AI Learns, Predicts, and Generates Language
+# 🚀 How AI Learns, Predicts, and Generates Language
 
 ## 📌 What is an LLM?
 A **Large Language Model(LLM)** is an advanced **Natural Language Processing (NLP)** model powered by deep learning. Trained on vast amounts of text data. It can **understand**, **generate**, and **reason** about human language.
