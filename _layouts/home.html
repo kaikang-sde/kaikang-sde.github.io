@@ -5,14 +5,17 @@ refactor: true
 
 {% include lang.html %}
 
-{% assign sorted_posts = site.posts | sort: "date" %}
+<!-- Sort posts by date (descending) -->
+{% assign sorted_posts = site.posts | sort: "date" | reverse %}
 {% assign all_pinned = sorted_posts | where: 'pin', 'true' %}
 {% assign all_normal = sorted_posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+
+<!-- Shuffle non-pinned posts -->
+{% assign shuffled_normal = all_normal | sample: all_normal.size %}
 
 {% assign posts = '' | split: '' %}
 
 <!-- Get pinned posts on current page -->
-
 {% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
 {% assign visible_end = visible_start | plus: paginator.per_page %}
 
@@ -30,8 +33,7 @@ refactor: true
   {% assign pinned_size = 0 %}
 {% endif %}
 
-<!-- Get normal posts on current page -->
-
+<!-- Get normal posts on current page (randomized) -->
 {% assign normal_size = paginator.posts | size | minus: pinned_size %}
 
 {% if normal_size > 0 %}
@@ -44,7 +46,7 @@ refactor: true
   {% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
 
   {% for i in (normal_start..normal_end) %}
-    {% assign posts = posts | push: all_normal[i] %}
+    {% assign posts = posts | push: shuffled_normal[i] %}
   {% endfor %}
 {% endif %}
 
