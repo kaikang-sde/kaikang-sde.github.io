@@ -13,7 +13,7 @@ layout: page
   </h1>
 
   <ul class="content ps-0">
-    {% assign sorted_category_posts = page.posts | sort: "date" %}  
+    {% assign sorted_category_posts = page.posts | sort: "date" | sort: "order" %}  
     {% for post in sorted_category_posts %}
       <li class="d-flex justify-content-between px-md-3">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
