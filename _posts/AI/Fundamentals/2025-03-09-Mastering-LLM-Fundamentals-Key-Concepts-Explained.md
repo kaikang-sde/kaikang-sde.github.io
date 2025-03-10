@@ -59,6 +59,25 @@ The Transformer architecture is the foundation of most state-of-the-art LLMs. It
 - **Scalability:** Enables training of **multi-billion parameter models** like GPT-4, PaLM-2, and LLaMA.
 - Transformers revolutionized NLP by enabling **faster training, longer context understanding, and improved efficiency**.
 
+### 3 types of transformers
+#### 1. Encoders
+An encoder is a model or neural network that processes input data and transforms it into a fixed or compressed representation. The encoder’s goal is to extract meaningful features from the input.
+- Takes raw input (e.g., text, image, audio).
+- Converts it into a latent representation (vector or hidden state).
+- Typically reduces the dimensionality or compresses the input.
+- Retains essential information while discarding unnecessary details.
+- Used in classification, embeddings, and feature extraction.
+
+#### 2. Decoder
+A decoder takes the encoded representation (latent space) and converts it back into a human-readable format or meaningful output. The decoder reconstructs or generates new sequences based on the encoded features.
+- Takes an encoded latent vector as input.
+- Generates output data (e.g., translated text, images, or predictions).
+- Often includes an attention mechanism to selectively focus on important encoded features.
+- Used in sequence-to-sequence models (seq2seq), machine translation, and generative models.
+
+#### 3. Encoder-Decoder(Seq2Seq)
+Encoders and decoders are often used together in AI models for various tasks. The encoder first processes the input sequence into a context representation, then the decoder generates an output sequence.
+
 
 ## 🔍 3. Self-Attention: How Transformers Understand Context
 Self-Attention allows a model to **assign different importance (weights) to words** when processing a sentence. This helps in capturing **meaning and relationships** beyond just sequential word order.
