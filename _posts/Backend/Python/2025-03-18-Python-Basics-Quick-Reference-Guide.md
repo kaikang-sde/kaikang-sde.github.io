@@ -3,6 +3,7 @@ title: Python Basics - Quick Reference Guide
 date: 2025-03-18
 categories: [Backend, Python]
 tags: [Python, Basics, Formatting, Data Types, Import]
+permalink: /python-basics-quick-reference-guide/
 author: kai
 ---
 
@@ -18,11 +19,11 @@ print(value1, value2, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
 ```
 
 #### Parameters
-- values: Values to be printed, can be multiple, separated by commas.
-- sep: Separator, default is a space.
-- end: Ending character, default is a newline `\n`.
-- file: Output destination (e.g., file object), default is console.
-- flush: Whether to forcibly flush the output (default False).
+- **values:** Values to be printed, can be multiple, separated by commas.
+- **sep:** Separator, default is a space.
+- **end:** Ending character, default is a newline `\n`.
+- **file:** Output destination (e.g., file object), default is console.
+- **flush:** Whether to forcibly flush the output (default False).
 
 #### Example
 
@@ -35,7 +36,7 @@ print("Kai", "Kang", "666", sep="---", end="!!!")  # Kai---Kang---666!!!
 ```
 
 
-### 2️⃣ str.format() (Recommended)
+### 2️⃣ `str.format()` (Recommended)
 
 ```python
 name = "kai"
@@ -57,7 +58,23 @@ age = 18
 print(f"Name: {name}, Age: {age}")  # Output: Name: Kai, Age: 18
 ```
 
-### 4️⃣ Using Expressions in f-strings
+### 4️⃣ Old-style Formatting (`%`)
+The `%` operator is a legacy formatting method, similar to C-style formatting.
+
+| Placeholder | Data Type |
+|-------------|------------|
+| `%s` | String |
+| `%d` | Integer |
+| `%f` | Floating point (default 6 decimal places) |
+| `%.nf` | Floating point with `n` decimal places |
+
+```python
+name = "Alice"
+age = 25
+print("Name: %s, Age: %d" % (name, age))  # Output: Name: Alice, Age: 25
+```
+
+### 5️⃣ Using Expressions in f-strings
 
 ```python
 # Mathematical operations
@@ -84,7 +101,7 @@ print(f"Grade: {'Excellent' if score >= 90 else 'Good'}") # Output: Grade: Good
 ## ⌨️ Python Input
 Python provides the input() function to get user input from the console. The return value is always a string.
 
-### 1️⃣ Basic input() Syntax
+### 1️⃣ Basic `input()` Syntax
 
 ```python
 user_input = input("Prompt message: ")
@@ -234,7 +251,7 @@ Understanding Python's built-in data types is essential for writing efficient an
 | **Dictionary (`dict`)** | ✅ Yes | ❌ No  | ☝🏻 Unique Keys | `d = {'a': 1}` |
 | **Set (`set`)** | ✅ Yes | ❌ No  | ☝🏻 No Duplicates | `s = {1, 2, 3}` |
 
-- **Lists and dictionaries are mutable**, meaning their values can be changed after creation.  
+- **Lists , Sets and dictionaries are mutable**, meaning their values can be changed after creation.  
 - **Strings and tuples are immutable**, ensuring their values remain constant.  
 - **Sets and dictionaries do not allow duplicate keys**, which makes them useful for unique collections.
 
@@ -268,7 +285,7 @@ print(x, y)  # Output: 3.14 0.0025
 
 ##### 3️⃣ Boolean (bool)
 - Has two possible values: True (1) and False (0).
-- bool is a subclass of int, meaning True is treated as 1 and False as 0.
+- bool is **a subclass of int**, meaning True is treated as 1 and False as 0.
 
 ```python
 is_active = True
