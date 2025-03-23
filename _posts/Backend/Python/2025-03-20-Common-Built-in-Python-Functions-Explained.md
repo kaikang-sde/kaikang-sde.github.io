@@ -15,8 +15,8 @@ Python provides built-in functions for **type conversion** (also known as **type
 
 | Function  | Purpose | Example | Output |
 |-----------|----------------------|----------------|--------|
-| `int(x)`  | Converts to integer | `int("123")` | `123` |
-| `float(x)` | Converts to floating point | `float("9.9")` | `9.9` |
+| `int("X")`  | Converts string to integer | `int("123")` | `123` |
+| `float("X")` | Converts string to floating point | `float("9.9")` | `9.9` |
 | `str(x)`  | Converts to string | `str(100)` | `"100"` |
 | `bool(x)` | Converts to boolean | `bool(0)`, `bool(1)` | `False`, `True` |
 
@@ -37,19 +37,23 @@ Python provides built-in functions to **create and convert container types**, in
 | `dict()` | Creates an empty dictionary | `dict()` | `{}` |
 | `set(list)` | Removes duplicates from a list | `set([1, 2, 2, 3])` | `{1, 2, 3}` |
 | `set(string)` | Converts a string into a set of unique characters | `set("apple")` | `{'a', 'p', 'l', 'e'}` |
-| `set()` | Creates an empty set | `set()` | `set() (Note: {} creates an empty dictionary)` |
+| `set()` | Creates an empty set<br> Note: {} creates an empty dictionary | `set()` | `set()` |
 
 
 ## 🥳 Math and Sequences
 
 ### range()
-The `range()` function generates **integer sequences**, commonly used for loops and iteration.
+The `range()` function generates **integer sequences**, `<class 'range'>`, commonly used for loops and iteration.<br>
+**parameters:**
+- **`start`**: The starting number (inclusive). Default is `0`.
+- **`stop`**: The end number (exclusive). Required.
+- **`step`**: The difference between each number in the sequence. Default is `1`.
 
 | Syntax | Description | Example|
 |--------|-------------|--------|
-| `range(stop)` | Generates a sequence from `0` to `stop - 1` (default step = `1`) | `r1 = range(5)` -> **output** [0, 1, 2, 3, 4]|
-| `range(start, stop)` | Generates a sequence from `start` to `stop - 1` (step = `1`) | `r2 = range(2, 5)` -> **output** [2, 3, 4]|
-| `range(start, stop, step)` | Generates a sequence with a custom step size | `r3 = range(2, 10, 2)` -> **output** [2 4 6 8]|
+| `range(stop)` | Generates a sequence from `0` to `stop - 1` (default step = `1`) | `r1 = list(range(5))` -> **output** [0, 1, 2, 3, 4]|
+| `range(start, stop)` | Generates a sequence from `start` to `stop - 1` (step = `1`) | `r2 = list(range(2, 5))` -> **output** [2, 3, 4]|
+| `range(start, stop, step)` | Generates a sequence with a custom step size | `r3 = list(range(2, 10, 2))` -> **output** [2 4 6 8]|
 | `for i in range(start, stop, step)` | Using range() in a Loop | `for i in range(2, 10, 2)` -> **output** 2 4 6 8|
 
 ### len()
@@ -76,8 +80,8 @@ Python provides built-in functions to **perform common mathematical operations**
 | `min(arg1, arg2, ...)` | Returns the smallest of multiple values | `min(5, 10, 2)` | `2` |
 
 
-### Time Handling with the `time` Module
-The `time` module in Python provides functions to work with **timestamps, delays, and formatted time strings**.<br>
+### time Module
+The `time` module in Python provides functions to work with **timestamps, delays, and formatted time strings**. <br>
 The `time.time()` function returns the **current timestamp** as the number of **seconds** since **January 1, 1970 (Unix Epoch time)**.
 
 | Function  | Description | Example |
