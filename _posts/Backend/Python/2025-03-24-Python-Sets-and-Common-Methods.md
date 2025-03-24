@@ -1,6 +1,7 @@
 ---
 title: Python Sets and Common Methods
 date: 2025-03-24
+order: 1
 categories: [Backend, Python]
 tags: [Python, Data Structures, Set]
 author: kai
