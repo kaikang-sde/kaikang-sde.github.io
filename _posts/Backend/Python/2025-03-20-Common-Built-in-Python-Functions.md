@@ -1,12 +1,12 @@
 ---
-title: Common Built-in Python Functions Explained
+title: Python Common Built-in Functions
 date: 2025-03-20
 categories: [Backend, Python]
 tags: [Python, Built-in Functions]
 author: kai
 ---
 
-# 🚀 Common Built-in Python Functions
+# 🚀 Python Common Built-in Functions
 Python comes with many **built-in functions**, master the most commonly used ones for efficient coding.
 
 ## 🤝 Data Type Conversion
