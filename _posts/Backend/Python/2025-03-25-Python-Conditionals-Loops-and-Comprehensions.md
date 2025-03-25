@@ -1,7 +1,6 @@
 ---
 title: Python Conditionals, Loops, and Comprehensions
-date: 2025-03-24
-order: 2
+date: 2025-03-25
 categories: [Backend, Python]
 tags: [Python, Loops, Conditionals, Comprehensions]
 author: kai

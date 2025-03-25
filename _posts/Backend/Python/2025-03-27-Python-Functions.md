@@ -1,7 +1,7 @@
 ---
 title: Python Functions
-date: 2025-03-24
-order: 4
+date: 2025-03-25
+order: 2
 categories: [Backend, Python]
 tags: [Python, Functions]
 author: kai
