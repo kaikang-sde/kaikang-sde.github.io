@@ -1,7 +1,7 @@
 ---
 title: Python Object-Oriented Programming (OOP)
-date: 2025-03-25
-order: 6
+date: 2025-03-27
+order: 4
 categories: [Backend, Python]
 tags: [Python, OOP, Object-Oriented Programming]
 author: kai
@@ -365,6 +365,213 @@ print(str(b))     # 《1984》 by George Orwell
 print(b)          # 《1984》 by George Orwell
 print(repr(b))    # Book(title='1984', author='George Orwell')
 ```
+
+## 👼🏻 OOPs Concepts 
+### Inheritance
+A mechanism where one class (child) **inherits** from another class (parent), gaining its **non-private attributes and methods**.
+
+Purpose:
+- Code reuse
+- Hierarchical relationships
+- Shared behavior structure
+
+```python
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    pass
+
+d = Dog()
+d.speak()  # Animal speaks -> Inherits speak() from Animal
+```
+
+### Method Overriding
+A child class **redefines** a method inherited from the parent class, with **the same method name and parameters.**
+
+Purpose:
+- Customize behavior
+- Prepare for polymorphism
+
+```python
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+d = Dog()
+d.speak()  # Dog barks
+```
+
+### Polymorphism
+The ability to use the **same interface (method name)** across different object types, where each type provides its own **specific implementation.**
+
+Purpose:
+- Unified interface
+- Flexible code
+- Replaceable components
+
+```python
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+def make_speak(animal): 
+    animal.speak()
+
+make_speak(Dog())     # Dog barks
+make_speak(Animal())  # Animal speaks
+# Even though make_speak() only expects an Animal, any subclass can override the behavior — that’s polymorphism in action.
+# The same method call behaves differently depending on object type
+```
+
+#### Inheritance and Overriding and Polymorphism
+
+| Relationship | Explanation |
+|--------------|-------------|
+| Inheritance -> enables -> Method Overriding | You override only if a method is inherited |
+| Overriding -> enables -> Polymorphism | Different implementations allow behavior variation |
+| Inheritance + Overriding -> Polymorphism | Together, they power flexible, reusable OOP systems |
+
+```python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+class Dog(Animal):  # Inherits from Animal
+    def speak(self):
+        print(f"{self.name} barks") # Method Overriding → The Dog class redefines the speak() method.
+
+class Cat(Animal):  # Inherits from Animal
+    def __init__(self, name, color):
+        super().__init__(name)  # Call Animal's constructor. Reusing Parent Logic with super()
+        self.color = color
+
+    def speak(self):
+        super().speak() # Extend parent speak() via super()
+        print(f"{self.name} meow meow~")
+
+
+animal = Animal("Some animal")
+animal.speak() # Some animal makes a sound
+
+dog = Dog("Rex")
+dog.speak()  # Rex barks
+
+cat = Cat("Coco", "Black")
+cat.speak() # Coco makes a sound
+            # Coco meow meow~
+
+def make_speak(animal):  # same method calls to behave differently depending on the object type
+    animal.speak() 
+
+make_speak(Animal("Big animal")) # Big animal makes a sound
+make_speak(Dog("Rex")) # Rex barks
+make_speak(Cat("Coco", "Black")) # Coco makes a sound
+                                # Coco meow meow~
+```
+
+
+#### super() and MRO
+Python's `super()` function is a powerful tool that allows child classes to **access methods from their parent classes** — even in complex inheritance scenarios.
+
+**MRO** stands for **Method Resolution Order** — the order in which Python looks up methods and attributes in a class hierarchy.
+
+
+```python
+class Base:
+    def __init__(self):
+        print("Base init")
+
+class A(Base):
+    def __init__(self):
+        super().__init__()
+        print("A init")
+
+class B(Base):
+    def __init__(self):
+        super().__init__()
+        print("B init")
+
+class C(A, B):
+    def __init__(self):
+        super().__init__()
+        print("C init")
+
+c = C()
+# Output:
+    Base init
+    B init
+    A init
+    C init
+
+print(C.mro())
+# Output:
+    [<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class '__main__.Base'>, <class 'object'>]
+    C()
+    └── A.__init__()
+        └── B.__init__()
+            └── Base.__init__()
+```
+
+- super() **does not mean “go to the parent class” directly**
+- It means: “**follow the MRO(Method Resolution Order) chain and go to the next class**”
+- This allows cooperative multiple inheritance to work smoothly
+
+So calling **super()** inside C’s **__init__()** goes to:
+1.	**A.__init__()**
+2.	Which then calls super() → goes to **B.__init__()**
+3.	Which then calls super() → goes to **Base.__init__()**
+4.	Done.
+
+### Abstraction
+In object-oriented programming, **abstract base classes (ABCs)** define **a common interface** for a group of related classes — **without implementing all their behavior**.
+
+Python supports this concept using **the `abc` module**, allowing you to create **abstract methods** and **enforce that subclasses implement them.** -> `from abc import ABC, abstractmethod`
+
+#### Abstract Base Class (ABC)
+- An **abstract base class** is a class that **cannot be instantiated**
+- It defines **abstract methods** that must be implemented by its subclasses
+- Think of it as a **contract** or a **template**
+
+#### Abstract Method
+- A method declared with **@abstractmethod**
+- Has **no body in the base class**
+- Must be **overridden** by any **non-abstract subclass**
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+class Cat(Animal):
+    def speak(self):
+        print("Cat meows")
+
+a = Animal()  # ❌ Error: can't instantiate abstract class
+d = Dog()
+d.speak()  # Dog barks
+```
+
+
 
 
 <br>

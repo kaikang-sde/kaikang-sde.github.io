@@ -1,7 +1,6 @@
 ---
 title: Python Iterators and Generators
-date: 2025-03-25
-order: 1
+date: 2025-03-26
 categories: [Backend, Python]
 tags: [Python, Iterators, Generators]
 author: kai

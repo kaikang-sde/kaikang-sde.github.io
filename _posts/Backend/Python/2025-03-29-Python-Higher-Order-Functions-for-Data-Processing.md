@@ -1,7 +1,7 @@
 ---
 title: Python Higher-Order Functions for Data Processing
-date: 2025-03-25
-order: 4
+date: 2025-03-27
+order: 2
 categories: [Backend, Python]
 tags: [Python, HOF, lambda, map, filter, reduce, data-processing]
 author: kai
