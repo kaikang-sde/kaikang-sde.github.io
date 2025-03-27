@@ -1,7 +1,7 @@
 ---
 title: Python Lambda (Anonymous) Functions
-date: 2025-03-25
-order: 3
+date: 2025-03-27
+order: 1
 categories: [Backend, Python]
 tags: [Python, lambda, anonymous-function]
 author: kai

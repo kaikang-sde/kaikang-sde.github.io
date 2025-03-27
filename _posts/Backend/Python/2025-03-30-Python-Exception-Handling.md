@@ -1,7 +1,7 @@
 ---
 title: Python Exception Handling
-date: 2025-03-25
-order: 5
+date: 2025-03-27
+order: 3
 categories: [Backend, Python]
 tags: [Python, exception, try-except]
 author: kai
