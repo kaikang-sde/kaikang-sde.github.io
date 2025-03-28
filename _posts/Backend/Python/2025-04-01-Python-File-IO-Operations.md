@@ -1,6 +1,6 @@
 ---
 title: Python File I/O Operations
-date: 2025-03-27
+date: 2025-03-28
 order: 5
 categories: [Backend, Python]
 tags: [Python, file-io, read-write, open, best-practices, with-statement]
