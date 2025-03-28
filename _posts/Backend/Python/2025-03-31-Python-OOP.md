@@ -1,6 +1,6 @@
 ---
 title: Python Object-Oriented Programming (OOP)
-date: 2025-03-27
+date: 2025-03-28
 order: 4
 categories: [Backend, Python]
 tags: [Python, OOP, Object-Oriented Programming]
@@ -218,7 +218,7 @@ class MathUtils:
 
     @staticmethod
     def is_prime(num):
-        """checking if a number is a prime（静utility functions）"""
+        """checking if a number is a prime（utility functions）"""
         if num < 2:
             return False
         for i in range(2, int(num**0.5) + 1):
