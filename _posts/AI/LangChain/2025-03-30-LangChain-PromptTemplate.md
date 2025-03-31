@@ -1,8 +1,8 @@
 ---
-title: LangChain PromptTemplate - Dynamic Prompt Design in Action
-date: 2025-03-31
+title: LangChain PromptTemplate
+date: 2025-03-30
 categories: [AI, LangChain]
-tags: [LangChain, Prompt Engineering, Python, LLM]
+tags: [LangChain, PromptTemplate, LLM]
 author: kai
 ---
 
