@@ -1,6 +1,6 @@
 ---
 title: LangChain ChatModel and ChatPromptTemplate
-date: 2025-03-31
+date: 2025-03-30
 categories: [AI, LangChain]
 tags: [LangChain, ChatModel, Prompt Engineering, Token Counting, ChatPromptTemplate]
 author: kai
@@ -388,7 +388,7 @@ print(response.content)
 
 ---
 
-🚀 Stay tuned for more insights into AI!
+🚀 Stay tuned for more insights into LangChain!
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: LangChain Architecture and LLM I/O Interaction Pipeline
-date: 2025-03-29
+date: 2025-03-28
 categories: [AI, LangChain]
 tags: [AI, LLMs, Prompt, OpenAI]
 author: kai
@@ -235,8 +235,10 @@ print(response)
 # Output: content="Hello! I'm an AI language model created to assist you with information, answer questions, and engage in conversation. How can I help you today?" additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 30, 'prompt_tokens': 13, 'total_tokens': 43, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_b376dfbbd5', 'finish_reason': 'stop', 'logprobs': None} id='run-7b45a5ba-6a6c-449e-8fd1-f1f32a79bf8a-0' usage_metadata={'input_tokens': 13, 'output_tokens': 30, 'total_tokens': 43, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}
 ```
 
+
+
 <br>
 
 ---
 
-🚀 Stay tuned for more insights into AI!
+🚀 Stay tuned for more insights into LangChain!
