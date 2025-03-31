@@ -1,7 +1,7 @@
 ---
 title: Python Object-Oriented Programming (OOP)
-date: 2025-03-28
-order: 4
+date: 2025-03-31
+order: 1
 categories: [Backend, Python]
 tags: [Python, OOP, Object-Oriented Programming]
 author: kai
