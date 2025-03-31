@@ -1,7 +1,7 @@
 ---
 title: Python Typing Module
-date: 2025-03-28
-order: 8
+date: 2025-03-31
+order: 5
 categories: [Backend, Python]
 tags: [Python, typing, type-hints, static-checking]
 author: kai
