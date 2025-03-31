@@ -1,6 +1,6 @@
 ---
 title: LangChain PromptTemplate
-date: 2025-03-30
+date: 2025-03-29
 categories: [AI, LangChain]
 tags: [LangChain, PromptTemplate, LLM]
 author: kai
@@ -246,7 +246,7 @@ print(answer)
 
 ---
 
-🚀 Stay tuned for more insights into AI!
+🚀 Stay tuned for more insights into LangChain!
 
 
 
