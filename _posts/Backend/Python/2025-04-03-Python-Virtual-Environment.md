@@ -1,7 +1,7 @@
 ---
 title: Python Virtual Environments
-date: 2025-04-01
-order: 3
+date: 2025-04-02
+order: 2
 categories: [Backend, Python]
 tags: [Python, virtualenv, venv, environment, pip, isolation]
 author: kai

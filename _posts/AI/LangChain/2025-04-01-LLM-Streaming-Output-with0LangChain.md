@@ -2,7 +2,7 @@
 title: LLM Streaming Output with LangChain
 date: 2025-04-01
 categories: [AI, LangChain]
-tags: [LangChain, Chains, LLMChain, LCEL, Workflow, Prompt Engineering]
+tags: [LangChain, Streaming, LLM, LCEL, ChatModel]
 author: kai
 ---
 
