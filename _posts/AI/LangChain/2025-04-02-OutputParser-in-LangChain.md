@@ -193,6 +193,7 @@ for chunk in chain.stream({"subject": "fruits"}):
 
 ### JsonOutputParser
 
+{% raw %}
 ```python
 from langchain_core.prompts import ChatPromptTemplate  
 from langchain_openai import ChatOpenAI  
@@ -243,6 +244,7 @@ content='```json\n{\n    "answer": "The average radius of the Earth is approxima
 # }
 # ```
 ```
+{% endraw %}
 
 ## ⚠️ Important Note on Output Parsers
 
@@ -267,6 +269,8 @@ result = robust_chain.invoke({"input": "some question"})
 
 
 
+
+<br>
 
 
 
