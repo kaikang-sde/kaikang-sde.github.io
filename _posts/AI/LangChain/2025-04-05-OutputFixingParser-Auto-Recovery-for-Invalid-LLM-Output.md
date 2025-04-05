@@ -1,7 +1,7 @@
 ---
 title: OutputFixingParser - Auto-Recovery for Invalid LLM Output
-date: 2025-04-03
-order: 3
+date: 2025-04-04
+order: 2
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Output Parsing]
 author: kai
@@ -224,7 +224,7 @@ Using `OutputFixingParser` helps mitigate output errors from LLMs. However, itâ€
   - Use proxy or VPN for API access.
   - Ensure API key quota is sufficient.
 
-## Tips to Improve Output Fixing Success
+## ðŸ’¡ Tips to Improve Output Fixing Success
 
 | Strategy                        | Description                                                             |
 |----------------------------------|-------------------------------------------------------------------------|
