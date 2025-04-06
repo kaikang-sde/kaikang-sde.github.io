@@ -1,7 +1,7 @@
 ---
 title: Retrieval-Augmented Generation (RAG)
-date: 2025-04-04
-order: 4
+date: 2025-04-06
+order: 2
 categories: [AI, LangChain]
 tags: [LangChain, LLM, RAG, Retrieval-Augmented Generation]
 author: kai

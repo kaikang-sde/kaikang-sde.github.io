@@ -1,7 +1,7 @@
 ---
 title: Hallucination in Large Language Models (LLMs)
-date: 2025-04-04
-order: 3
+date: 2025-04-06
+order: 1
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Hallucination]
 author: kai
