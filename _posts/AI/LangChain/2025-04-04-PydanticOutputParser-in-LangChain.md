@@ -1,7 +1,6 @@
 ---
 title: PydanticOutputParser in LangChain
 date: 2025-04-04
-order: 1
 categories: [AI, LangChain]
 tags: [LangChain, Pydantic, OutputParser, LLM]
 author: kai

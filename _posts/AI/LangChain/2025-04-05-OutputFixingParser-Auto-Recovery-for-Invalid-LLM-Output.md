@@ -1,7 +1,6 @@
 ---
 title: OutputFixingParser - Auto-Recovery for Invalid LLM Output
-date: 2025-04-04
-order: 2
+date: 2025-04-05
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Output Parsing]
 author: kai
