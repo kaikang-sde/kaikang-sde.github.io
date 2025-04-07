@@ -1,7 +1,7 @@
 ---
 title: RAG System Pipeline & Document Loading (Loaders)
-date: 2025-04-06
-order: 3
+date: 2025-04-07
+order: 2
 categories: [AI, LangChain]
 tags: [LangChain, LLM, RAG, Retrieval-Augmented Generation, Loader]
 author: kai
