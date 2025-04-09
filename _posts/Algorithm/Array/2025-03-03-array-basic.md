@@ -9,7 +9,7 @@ author: kai
 ## Arrays in Jave
 
 ### What 
-An **array** is a data structure that stores multiple values of the same type in a contiguous block of memory. It provides a way to group and manage a collection of elements using a single variable name.
+An **array** is a data structure that stores **multiple values** of the **same type** in a **contiguous block of memory**. It provides a way to group and manage a collection of elements using **a single variable name**.
 
 - Arrays in Java are **fixed in size**, meaning their length is determined when they are created and cannot be changed.
 - Elements in an array are accessed using an **index**, starting from `0`.

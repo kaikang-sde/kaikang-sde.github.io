@@ -1,7 +1,6 @@
 ---
 title: LangChain Loader Case Study
-date: 2025-04-08
-order: 2
+date: 2025-04-09
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Loader, TextLoader, CSVLoader, JSONLoader, PyPDFLoader, Docx2txtLoader, WebBaseLoader]
 author: kai
