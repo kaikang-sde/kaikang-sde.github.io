@@ -190,6 +190,85 @@ Selected Backend Server
 ⚠️ Note: Layer 7 load balancers consume more system resources but offer much more **flexibility and intelligence** in routing logic.
 
 
+## 🧵 Network Layers & Protocols
+A **network layered model** organizes how data is transmitted from one computer to another in the form of "layers" — just like how a package is processed from the sender to the receiver through various **delivery checkpoints**.
+
+
+### Real-World Analogy: Sending Ice Cream to a Friend
+
+🎄 It's Christmas. Kai (in PA) wants to send a box of ice cream to Jojo (in VA), who lives with Ahsh.
+
+- 📦 **The box of ice cream** = Application data
+- 🏢 **PA → VA logistics center** = Network Layer (IP-based routing between hosts)
+- 👦 **Local delivery person (looks at name & phone)** = Transport Layer (TCP/UDP — targets correct process)
+- 👩‍🦰 **Jojo in her shared apartment** = Application-level process
+
+| Real-World Item         | Network Equivalent     |
+|--------------------------|------------------------|
+| House in PA       | A Host (IP address)     |
+| 👩 Jojo / Ahsh (roommates) | Processes (Port numbers) |
+| 📦 Ice cream box         | Application data       |
+| 🚚 Logistics center       | Network (IP routing)    |
+| 🧍 Local delivery guy     | Transport layer (TCP)   |
+
+
+**Sending a Packet (Data Flow: Top to Bottom)**
+```text
+[Application Layer]  — Message
+↓
+[Transport Layer]    — Adds Port (Process Info)
+↓
+[Network Layer]      — Adds IP (Host Info)
+↓
+[Data Link + Physical] — Converts to bits and sends via NIC
+```
+
+**Receiving a Packet (Data Flow: Bottom to Top)**
+
+```text
+[Physical Layer]     — Reads bits from wire
+↑
+[Data Link Layer]    — Frame checking (MAC)
+↑
+[Network Layer]      — IP check (Host address)
+↑
+[Transport Layer]    — Port check (Process address)
+↑
+[Application Layer]  — Final message consumed by app
+
+```
+
+### Layer Mapping
+
+| **Role**                     | **OSI Model (7 Layers)**     | **TCP/IP Model (4 Layers)**     | **Typical Network Protocols**                |
+|-----------------------------|-------------------------------|----------------------------------|----------------------------------------------|
+| **Application (User Space)**| 7. Application Layer             | 4. Application Layer                | HTTP, FTP, NFS                                |
+|                             | 6. Presentation Layer            | *(Part of Application)*      | Telnet, SNMP                                  |
+|                             | 5. Session Layer                 | *(Part of Application)*      | SMTP, DNS                                     |
+| **Operating System (Kernel)**| 4. Transport Layer              | 3. Transport Layer                  | TCP, UDP                                      |
+|                             | 3. Network Layer                 | 2. Internet Layer                   | IP, ICMP, ARP, RARP                           |
+| **Network Devices & Drivers**| 2. Data Link Layer              | 1. Network Access Layer             | PPP, Ethernet                                 |
+|                             | 1.Physical Layer                | *(Part of Network Access Layer)* | IEEE 802.1A, IEEE 802.2 ~ IEEE 802.11         |
+
+
+### Network Layer/Host vs. Transport Layer/Process 
+
+| Layer         | Who Talks to Who?       | Address Used | Error Checking |
+|---------------|--------------------------|--------------|----------------|
+| Network Layer | Host-to-Host (device)     | IP Address   | Header only    |
+| Transport Layer | Process-to-Process (apps) | Port Number  | Header + Data  |
+
+💡 Think of it this way:
+- The **network layer** makes sure the package reaches the right **house**.
+- The **transport layer** ensures the package goes to the right **roommate**.
+
+
+### transport layer vs. network layer
+
+| Layer           | What it Does                         | Real-World Analogy         |
+|------------------|--------------------------------------|-----------------------------|
+| Network Layer (IP) | Finds the right host across the internet | From Beijing to Guangzhou (main delivery hub) |
+| Transport Layer (TCP/UDP) | Finds the right process on the host | Final delivery to Bingbing, not Anna |
 
 
 
