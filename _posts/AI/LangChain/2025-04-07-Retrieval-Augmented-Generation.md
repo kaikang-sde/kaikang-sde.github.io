@@ -221,7 +221,7 @@ RAG is not just about asking questions — it's about **structuring unstructured
 
 ---
 
-🚀 Stay tuned for more insights into LangChain!
+🚀 Stay tuned for more insights into LangChain and RAG!
 
 
 

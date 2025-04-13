@@ -3,6 +3,7 @@ title: RAG System Pipeline & Document Loading (Loaders)
 date: 2025-04-08
 categories: [AI, LangChain]
 tags: [LangChain, LLM, RAG, Retrieval-Augmented Generation, Loader]
+permalink: /LangChain/RAG-System-Pipeline-Document-Loading
 author: kai
 ---
 
@@ -162,7 +163,7 @@ LangChain is **extensible** and allows developers to create their own loaders by
 
 ---
 
-🚀 Stay tuned for more insights into LangChain!
+🚀 Stay tuned for more insights into LangChain and RAG!
 
 
 
