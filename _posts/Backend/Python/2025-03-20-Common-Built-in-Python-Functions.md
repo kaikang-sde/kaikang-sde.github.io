@@ -90,6 +90,42 @@ The `time.time()` function returns the **current timestamp** as the number of **
 | `time.sleep(seconds))` | Pause execution for x seconds   | `start = time.time()`<br>`time.sleep(2)  # Pause execution for 2 seconds`<br>`end = time.time()` |
 | `time.strftime()` | formats the current time into a human-readable string.  | `now = time.strftime("%Y-%m-%d %H:%M:%S")` -> **output:** "2030-10-01 14:30:00"|
 
+
+
+## 👀 enumerate()
+The `enumerate()` function is a built-in Python method that allows you to loop over an iterable and keep track of both the **index** and the **value** of each item simultaneously.
+
+**Syntax:**  `enumerate(iterable, start=0)`
+- **iterable: (Required)** A sequence like a list, tuple, or string.
+- **start: (Optional)** The starting index (default is 0).
+
+```python
+fruits = ['apple', 'banana', 'orange']
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+
+# Output:
+# 0 apple
+# 1 banana
+# 2 orange
+
+
+for index, fruit in enumerate(fruits, start=1):
+    print(index, fruit)
+
+# Output:
+# 1 apple
+# 2 banana
+# 3 orange  
+```
+
+
+
+
+
+
+
+
 <br>
 
 ---

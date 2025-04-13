@@ -464,7 +464,7 @@ for doc in docs:
 
 ---
 
-🚀 Stay tuned for more insights into LangChain!
+🚀 Stay tuned for more insights into LangChain and RAG!
 
 
 
