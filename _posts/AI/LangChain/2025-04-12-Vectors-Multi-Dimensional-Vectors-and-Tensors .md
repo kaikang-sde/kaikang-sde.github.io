@@ -233,7 +233,7 @@ It depends on the **task complexity**:
 | NLP (ChatGPT, BERT, etc.)   | 768, 1024, or even >2000     |
 
 
-## Summary 
+## 🤖 Summary 
 - **Vector** → A list of numbers (like GPS coordinates).
 - **Multidimensional vector** → A longer list of attributes (like a detailed resume).
 - **Tensor** → A container for numbers (like Excel sheets, image batches, or video frames).

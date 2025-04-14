@@ -175,6 +175,156 @@ User Input -> Embedding Model -> Text Vector -> Vector Database -> Cosine Simila
 ```
 
 
+## 🔧 NumPy
+**NumPy** (short for *Numerical Python*) is the foundational scientific computing library in Python, specifically designed for efficient operations **on multidimensional arrays and matrices**.
+
+
+## Core Functionality
+- Provides the powerful `ndarray` object — a fast, flexible N-dimensional array.
+- Supports **vectorized operations**, allowing mathematical computations without explicit loops.
+- Enables broadcasting, indexing, slicing, reshaping, and more.
+
+
+## Why NumPy
+
+- Acts as the **core dependency** for nearly all scientific Python libraries, including:
+  - `pandas` (data analysis)
+  - `scipy` (scientific computing)
+  - `tensorflow` and `pytorch` (deep learning)
+- Boosts performance by offloading low-level operations to optimized C code.
+
+
+### Design Philosophy
+When working with numerical data in Python, traditional lists can become inefficient and verbose — especially for large-scale operations.
+Replace traditional `for` loops with **concise and efficient syntax**.
+
+#### The Pain Point with Native Python Lists
+In plain Python, adding two lists element-wise requires a loop or list comprehension:
+- Drawback: Manual looping is slow and not scalable.
+
+```python
+# Element-wise addition using list comprehension
+a = [1, 2, 3]
+b = [4, 5, 6]
+result = [a[i] + b[i] for i in range(len(a))]  # Output: [5, 7, 9]
+```
+
+#### NumPy: Vectorized Syntax for the Win
+NumPy replaces verbose loops with clean, efficient vectorized operations:
+- Advantage: No loops required — NumPy performs the operation at C speed under the hood.
+
+```python
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+result = a + b  # Output: array([5, 7, 9])
+```
+
+#### Performance Comparison
+Using NumPy doesn't just simplify syntax — it dramatically **boosts performance**, especially for large-scale numerical operations.
+
+
+| Operation Type      | Python List Time | NumPy Time | Speed-Up Factor |
+|---------------------|------------------|------------|------------------|
+| Sum of 1M elements  | 15 ms            | 0.5 ms     | 🚀 30x faster     |
+| Matrix multiplication | Complex manual loops | One-line operation | ⚡️ 100x faster   |
+
+> ✅ NumPy is optimized with C-level implementations, allowing operations to run **orders of magnitude faster** than plain Python lists.
+
+### NumPy Installation Guide
+
+- **Standard Installation:** `pip install numpy`
+- **Verify Installation:** `python -c "import numpy as np; print(np.__version__)"`
+- **Upgrade NumPy:** `pip install numpy --upgrade`
+
+
+### Example 1: Basic Cosine Similarity Between Two Vectors
+```python
+import numpy as np
+
+
+def cos_sim(v1, v2):
+    """
+    Compute the cosine similarity between two vectors.
+    
+    Cosine similarity measures the directional similarity between vectors,
+    ignoring their magnitude. The result ranges from -1 to 1:
+      - 1 means perfectly aligned (same direction)
+      - 0 means orthogonal (no similarity)
+      - -1 means opposite direction
+
+    Args:
+        v1 (np.ndarray): First vector
+        v2 (np.ndarray): Second vector
+
+    Returns:
+        float: Cosine similarity between v1 and v2
+    """
+
+    # Step 1: Dot product of the vectors
+    dot = np.dot(v1, v2)  
+
+    # Step 2: Product of magnitudes
+    norm = np.linalg.norm(v1) * np.linalg.norm(v2) 
+
+    # Step 3: Cosine similarity: cos(θ) = (A · B) / (||A|| ||B||)
+    return dot / norm
+
+# Define test vectors (supports any dimension)
+vec_a = np.array([0.2, 0.5, 0.8])  # Example: embedding of text A
+vec_b = np.array([0.3, 0.6, 0.7])  # Example: embedding of text B
+
+# Output: Cosine Similarity: 0.9840
+print(f"Cosine Similarity: {cos_sim(vec_a, vec_b):.4f}")
+```
+
+### Example 2: Recommend Items Based on Embedding Similarity
+```python
+import numpy as np
+
+
+def cosine_similarity(a, b):
+    # Convert to NumPy arrays
+    a = np.array(a)
+    b = np.array(b)
+    
+    # Compute dot product and norms
+    dot_product = np.dot(a, b)
+    norm_a = np.linalg.norm(a)
+    norm_b = np.linalg.norm(b)
+
+    # Return cosine similarity
+    return dot_product / (norm_a * norm_b) if norm_a * norm_b != 0 else 0
+
+# User embedding vector generated from browsing behavior
+user_embedding = [0.7, -0.2, 0.5, 0.1]
+
+# Product embedding vectors (e.g., from product descriptions, tags, or categories)
+products = {
+    "item1": [0.6, -0.3, 0.5, 0.2],
+    "item2": [0.8, 0.1, 0.4, -0.1],
+    "item3": [-0.5, 0.7, 0.2, 0.3]
+}
+
+# Compute similarity and build recommendation list
+recommendations = []
+for item_id, vec in products.items():
+    sim = cosine_similarity(user_embedding, vec)
+    recommendations.append((item_id, round(sim, 3)))
+
+# Sort by similarity descending
+recommendations.sort(key=lambda x: x[1], reverse=True)
+
+print("Recommendation Ranking:", recommendations)
+
+# Output: 
+# Recommendation Ranking: [('item1', 0.981), ('item2', 0.907), ('item3', -0.434)]
+```
+
+
+
+
 
 
 <br>
