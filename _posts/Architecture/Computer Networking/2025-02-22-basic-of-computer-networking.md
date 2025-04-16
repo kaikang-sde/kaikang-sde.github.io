@@ -1,8 +1,9 @@
 ---
 title: OSI & TCP/IP Network Layer Models
 date: 2025-02-22
-categories: [Architecture, Computer Networking, OSI & TCP/IP, Network Layer Models]
+categories: [Architecture, Computer Networking, OSI & TCP/IP]
 tags: [computer networking]
+permalink: /basic-of-computer-networking/
 author: kai
 ---
 
@@ -205,6 +206,15 @@ A **network layered model** organizes how data is transmitted from one computer 
 |                             | 1.Physical Layer      | *(Part of Network Access Layer)* | IEEE 802.1A, IEEE 802.2 ~ IEEE 802.11 |
 
 
+
+The **application layer** is the topmost layer in the network protocol stack and is **directly interfacing with the end user**.
+> ❗️ It **is not** the application itself, but rather a **standardized interface** that supports communication between applications over the network.
+
+The core goal of the application layer is to:
+- **Ensure interoperability**: Allow different types of applications (e.g., email clients, web browsers, file transfer tools) to **communicate using common protocols**.
+- **Bridge the gap**: Abstract lower-level protocols and provide a **uniform API** for application-level data exchange.
+
+
 **Sending a Packet (Data Flow: Top to Bottom)**
 ```text
 [Application Layer]  — Message -> msg: Hi
@@ -248,26 +258,20 @@ A **network layered model** organizes how data is transmitted from one computer 
 
 ### Network Layer/Host vs. Transport Layer/Process 
 
-| Layer         | Who Talks to Who?       | Address Used | Error Checking |
-|---------------|--------------------------|--------------|----------------|
-| Network Layer | Host-to-Host (device)     | IP Address   | Header only    |
-| Transport Layer | Process-to-Process (apps) | Port Number  | Header + Data  |
+| Layer         | What it Does      | Who Talks to Who?       | Address Used | Error Checking | Real-World Analogy         |
+|---------------|-------------------|-------------------------|--------------|----------------|----------------------------|
+| Network Layer | Finds the right host across the internet | Host-to-Host (device)     | IP Address   | Header only    | From PA to VA (main delivery hub) |
+| Transport Layer | Finds the right process on the host | Process-to-Process (apps) | Port Number  | Header + Data  | Final delivery to Jojo, not Bing |
 
 💡 Think of it this way:
 - The **network layer** makes sure the package reaches the right **house**.
 - The **transport layer** ensures the package goes to the right **roommate**.
 
 
-### transport layer vs. network layer
-
-| Layer           | What it Does                         | Real-World Analogy         |
-|------------------|--------------------------------------|-----------------------------|
-| Network Layer (IP) | Finds the right host across the internet | From PA to VA (main delivery hub) |
-| Transport Layer (TCP/UDP) | Finds the right process on the host | Final delivery to Jojo, not Bing |
-
 
 
 <br>
+
 
 ---
 

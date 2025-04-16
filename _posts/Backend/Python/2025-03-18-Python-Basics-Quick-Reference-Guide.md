@@ -93,9 +93,9 @@ print(f"Grade: {'Excellent' if score >= 90 else 'Good'}") # Output: Grade: Good
 - The default newline character is `\n`, use `end=""` to prevent a newline.
 - f-strings do not support escape characters like `\n`. Use variables instead.
 - Performance Comparison (Execution time for 1,000,000 iterations):
-    - f-string: 0.12秒
-    - format(): 0.25秒
-    - % format: 0.18秒
+    - f-string: 0.12s
+    - format(): 0.25s
+    - % format: 0.18s
 
 
 ## ⌨️ Python Input
