@@ -6,7 +6,7 @@ tags: [computer networking]
 author: kai
 ---
 
-# Network Layer or Internet Layer
+# 🌐 Network Layer or Internet Layer
 The **Network Layer** is a fundamental component of modern computer networks, responsible for **routing data packets** from one host to another across interconnected networks.
 
 [Network Layer/Internet Layer]({{ site.baseurl }}/basic-of-computer-networking/#-tcpip-4-layer-model)
@@ -91,7 +91,7 @@ To accommodate this:
 | Reassembly       | Restore the original datagram at the destination          |
 
 
-## 🌐 Protocols in the Network Layer
+## 🛜 Protocols in the Network Layer
 The **Network Layer** is responsible for delivering packets across different networks and plays a central role in the architecture of the Internet. Here are the **key protocols** that operate at this layer:
 
 1. IP (Internet Protocol)

@@ -7,7 +7,7 @@ permalink: /basic-of-computer-networking/
 author: kai
 ---
 
-# OSI & TCP/IP Network Layer Models
+# 🌐 OSI & TCP/IP Network Layer Models
 
 In modern networking, the **layered architecture** is the foundation that makes the internet scalable, modular, and maintainable. 
 
@@ -78,7 +78,7 @@ This **modular design** enables:
 - Easier maintenance and upgrades
 
 
-## 🌐 OSI vs. TCP/IP
+## 🥷🏻 OSI vs. TCP/IP
 Both models serve as frameworks for understanding how data flows across networks. While they differ in complexity and abstraction, **each has unique advantages**.
 
 
