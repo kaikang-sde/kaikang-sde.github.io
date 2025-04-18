@@ -1,7 +1,6 @@
 ---
 title: Vector Databases 
 date: 2025-04-17
-order: 1
 categories: [AI, LangChain]
 tags: [LangChain, LLM, RAG, Embedding, Vector Databases]
 author: kai

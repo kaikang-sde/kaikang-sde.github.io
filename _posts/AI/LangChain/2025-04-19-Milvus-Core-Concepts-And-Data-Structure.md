@@ -1,7 +1,7 @@
 ---
 title: Milvus Core Concepts and Data Structures
-date: 2025-04-17
-order: 3
+date: 2025-04-18
+order: 2
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Collection, Entity, Field, Similarity]
 author: kai
@@ -245,6 +245,10 @@ Best for text embeddings or when comparing documents semantically.
 
 
 
+
+
+
+
 <br>
 
 
@@ -252,7 +256,7 @@ Best for text embeddings or when comparing documents semantically.
 
 ---
 
-🚀 Stay tuned for more insights into LangChain and RAG!
+🚀 Stay tuned for more insights into LangChain and Milvus!
 
 
 
