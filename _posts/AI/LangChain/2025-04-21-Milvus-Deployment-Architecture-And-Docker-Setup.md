@@ -163,19 +163,23 @@ You can connect to the Milvus server using either the low-level `connections.con
 
 #### Step 1: Connect to the Milvus Server - 2 ways
 
-**Option 1: Using pymilvus connection module**
+**Option 1: gRPC - Using pymilvus connection module**
 ```python
 from pymilvus import connections
 
 # Connect to remote Milvus server
-conn = connections.connect(host="**.163.**.180", port=19530)
+conn = connections.connect(host="54.163.61.180", port=19530)
+
+db.using_database("my_database")
 ```
 
-**Option 2: MilvusClient**
+**Option 2: Rest - MilvusClient**
 ```python
 from pymilvus import MilvusClient
 
-client = MilvusClient("http://**.163.**.180:19530")
+client = MilvusClient(
+    uri="http://54.163.61.180:19530",
+    db_name="my_database")
 ```
 
 #### Step 2: Create, Use and Drop Databases
@@ -186,7 +190,7 @@ from pymilvus import connections, db
 # Create a new database 
 db.create_database("my_database") # need not to use conn to create database, using db instead
 
-# Switch to the new database
+# Switch to the database - gRPC way
 db.using_database("my_database")
 
 
@@ -332,12 +336,12 @@ You now insert the following records, each containing an additional field color 
 [
     {
         "id": 0,
-        "vector": [0.3580, -0.6023, 0.1841, -0.2628, 0.9029],
+        "vector": [0.3580, -0.6023, 0.1841, -0.2628, 0.9029, ...],
         "color": "pink_8682"
     },
     {
         "id": 7,
-        "vector": [-0.3344, -0.2567, 0.8987, 0.9402, 0.5378],
+        "vector": [-0.3344, -0.2567, 0.8987, 0.9402, 0.5378, ...],
         "color": "grey_8510"
     }
 ]
@@ -351,6 +355,7 @@ You can still:
 - Search by vector
 - Query the color value using advanced filtering
 - Export and recover full records
+
 
 
 
