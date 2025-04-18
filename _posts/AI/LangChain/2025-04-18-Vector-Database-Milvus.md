@@ -1,7 +1,7 @@
 ---
 title: Vector Database - Milvus
-date: 2025-04-17
-order: 2
+date: 2025-04-18
+order: 1
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Vector Database, Milvus]
 author: kai
@@ -141,7 +141,7 @@ This design enables efficient storage, indexing, and retrieval of structured dat
 
 ---
 
-🚀 Stay tuned for more insights into LangChain and RAG!
+🚀 Stay tuned for more insights into LangChain and Milvus!
 
 
 
