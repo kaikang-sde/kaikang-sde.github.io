@@ -211,7 +211,7 @@ For **legacy systems**, start with plugins on existing DBs to reduce migration c
 
 ---
 
-🚀 Stay tuned for more insights into LangChain and RAG!
+🚀 Stay tuned for more insights into LangChain and Vector Database!
 
 
 
