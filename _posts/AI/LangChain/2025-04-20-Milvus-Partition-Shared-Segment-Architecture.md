@@ -1,7 +1,7 @@
 ---
 title: Milvus Partition-Shard-Segment Architecture
-date: 2025-04-18
-order: 3
+date: 2025-04-19
+order: 2
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Partition, Shard, Segment]
 author: kai
@@ -269,7 +269,7 @@ client.set_property("dataCoord.segment.sealProportion", "0.7") # Seal when 70% f
 
 ---
 
-🚀 Stay tuned for more insights into LangChain and Milvus!
+🚀 Stay tuned for more insights into LangChain and Vector Database!
 
 
 

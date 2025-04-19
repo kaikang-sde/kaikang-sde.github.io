@@ -1,7 +1,7 @@
 ---
 title: Indexing in Milvus - Best Practices and Strategy Guide
-date: 2025-04-18
-order: 5
+date: 2025-04-19
+order: 4
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Indexing]
 author: kai
@@ -212,7 +212,7 @@ Designing a robust schema and managing indexes properly is crucial for high-perf
 
 ---
 
-🚀 Stay tuned for more insights into LangChain and Milvus!
+🚀 Stay tuned for more insights into LangChain and Vector Database!
 
 
 
