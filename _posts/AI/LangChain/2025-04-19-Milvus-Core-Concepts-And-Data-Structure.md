@@ -1,7 +1,6 @@
 ---
 title: Milvus Core Concepts and Data Structures
 date: 2025-04-19
-order: 1
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Collection, Entity, Field, Similarity]
 author: kai
