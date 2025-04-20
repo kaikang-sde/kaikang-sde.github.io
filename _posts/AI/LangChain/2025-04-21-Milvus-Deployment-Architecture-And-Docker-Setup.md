@@ -1,7 +1,7 @@
 ---
 title: Milvus Deployment Architecture & Docker Setup
-date: 2025-04-19
-order: 3
+date: 2025-04-20
+order: 2
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Deployment, Attu]
 permalink: /Milvus-Deployment-Architecture-And-Docker-Setup/

@@ -1,7 +1,7 @@
 ---
 title: Indexing in Milvus - Best Practices and Strategy Guide
-date: 2025-04-19
-order: 4
+date: 2025-04-20
+order: 3
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Indexing]
 author: kai

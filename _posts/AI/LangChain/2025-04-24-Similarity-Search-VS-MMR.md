@@ -1,7 +1,7 @@
 ---
 title:  Similarity Search vs. MMR (Maximal Marginal Relevance)
-date: 2025-04-19
-order: 6
+date: 2025-04-20
+order: 5
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, CRUD]
 author: kai
