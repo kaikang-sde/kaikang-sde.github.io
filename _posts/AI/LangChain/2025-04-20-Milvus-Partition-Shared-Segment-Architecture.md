@@ -1,7 +1,6 @@
 ---
 title: Milvus Partition-Shard-Segment Architecture
 date: 2025-04-20
-order: 1
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Partition, Shard, Segment]
 author: kai
