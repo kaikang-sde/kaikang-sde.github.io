@@ -1,6 +1,6 @@
 ---
 title: LangChain Integration with Milvus - Case Study
-date: 2025-04-21
+date: 2025-04-22
 order: 7
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, RAG]
