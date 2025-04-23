@@ -1,7 +1,7 @@
 ---
 title: CRUD with Milvus Vector Database
-date: 2025-04-22
-order: 2
+date: 2025-04-23
+order: 1
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, CRUD]
 author: kai

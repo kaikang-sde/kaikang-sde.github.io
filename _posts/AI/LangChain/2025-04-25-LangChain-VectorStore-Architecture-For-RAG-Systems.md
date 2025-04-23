@@ -1,7 +1,7 @@
 ---
 title: LangChain VectorStore Architecture for RAG Systems
-date: 2025-04-22
-order: 4
+date: 2025-04-23
+order: 3
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, RAG, VectorStore]
 author: kai
