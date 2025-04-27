@@ -183,44 +183,63 @@ Each subclass is designed to address a specific type of data processing need—w
 | `RunnablePassthrough`  | Data passthrough               | Forwarding original input without change  |
 
 
-### 1. `RunnableSequence`
+## 📚 Core Best Practices
+### 1. Smart Composition with `|` Operator
 
-- Executes multiple Runnables **in a strict order**.
-- Each step’s output becomes the next step’s input.
-- Equivalent to chaining components with the `|` operator.
-
-✅ Best for **linear, deterministic pipelines** like prompt → model → output parser.
-
-
-### 2. `RunnableBranch`
-
-- Implements **conditional routing**.
-- At runtime, **selects a different branch** based on input data or context.
-- Each branch is itself a Runnable.
-
-✅ Ideal for **dynamic workflows** where different models, prompts, or retrieval strategies are chosen depending on user intent.
+- Use the `|` operator to **chain**, **nest**, and **compose** multiple `Runnable` components naturally.
+- Design your logic **modularly**:
+  - Preprocessing ➔ Logging ➔ Routing ➔ Specialized Chains ➔ Postprocessing
+- This keeps pipelines clean, extendable, and easy to maintain.
 
 
-### 3. `RunnableParallel`
+### 2. Performance Optimization with `RunnableParallel`
 
-- Executes **multiple Runnables concurrently** on the same input.
-- Returns a **dictionary of outputs**, keyed by each Runnable’s name.
-
-✅ Great for **multi-tasking scenarios**, such as simultaneously summarizing, translating, and classifying the same document.
-
-
-### 4. `RunnablePassthrough`
-
-- Simply **forwards the input unchanged** to the next step.
-- Useful for:
-  - Preserving user input alongside retrieved context
-  - Feeding raw inputs into prompt templates
-  - Debugging intermediate stages
-
-✅ Essential in complex pipelines where **you need to pass both original and processed data** downstream.
+- Where possible, use `RunnableParallel` to **execute independent tasks simultaneously**.
+- Reduces **IO wait time** and **model inference bottlenecks** dramatically.
+- Examples:
+    - Parallel document retrieval from multiple sources
+    - Running multi-intent detectors at the same time
+    - Combining summarization + sentiment analysis in one shot
 
 
+### 3. Debugging with `RunnableLambda`
 
+- Insert `RunnableLambda` at key points to:
+  - **Log intermediate inputs**
+  - **Inspect branching decisions**
+  - **Monitor data flow inside the chain**
+- Simple and lightweight way to debug complex pipelines without breaking the chain structure.
+- Always remember: `RunnableLambda` must **return the input unchanged** unless transformation is intended.
+
+
+### 4. Fault-Tolerant Design with `RunnableBranch`
+
+- Always plan for **fallbacks**:
+  - If none of the routing conditions are met, ensure a **default chain** exists.
+- Handle **unexpected or missing data** gracefully.
+- Combine `RunnableBranch` with error handlers to build **resilient and production-grade chains**.
+- Good routing + good defaults = stronger, user-friendly intelligent systems.
+
+
+## 📈 Visual Best Practice Pipeline
+
+```plaintext
+Raw Input
+    ↓
+RunnableLambda (Input Formatting)
+    ↓
+RunnableLambda (Input Validation or Logging)
+    ↓
+RunnableBranch (Dynamic Routing)
+    ↓
+├── Tech Chain
+├── Billing Chain
+└── Default Chain
+    ↓
+(Optionally) RunnableParallel for multi-task postprocessing
+    ↓
+Final Output
+```
 
 
 
@@ -234,7 +253,6 @@ Each subclass is designed to address a specific type of data processing need—w
 
 ---
 
-🚀 Stay tuned for more insights into LangChain and RAG!
-
+🚀 Stay tuned for more insights into LangChain!
 
 

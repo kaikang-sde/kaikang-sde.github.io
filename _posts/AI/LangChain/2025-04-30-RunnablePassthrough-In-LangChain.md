@@ -1,7 +1,7 @@
 ---
 title: RunnablePassthrough in LangChain
 date: 2025-04-27
-order: 3
+order: 4
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, RunnablePassthrough]
 author: kai
@@ -26,9 +26,10 @@ Original Input
     ↓
 RunnablePassthrough
     ↓
-Decision: use assign?  -> YES -> Add new fields → Output enhanced dictionary
+Decision: use assign?  
     ↓
-    --------------------> No → Output original input unchanged
+    ├── YES -> Add new fields → Output enhanced dictionary
+    └──  No → Output original input unchanged
   ```
 
 
@@ -284,7 +285,7 @@ Final Output
 
 ---
 
-🚀 Stay tuned for more insights into LangChain and RAG!
+🚀 Stay tuned for more insights into LangChain!
 
 
 
