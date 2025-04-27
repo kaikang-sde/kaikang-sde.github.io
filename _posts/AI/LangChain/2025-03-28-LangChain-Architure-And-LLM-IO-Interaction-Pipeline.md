@@ -219,7 +219,7 @@ Using the **LangChain framework** and **langchain_openai** plugin to connect to 
 from langchain_openai import ChatOpenAI
 import os
 
-os.environ["OPENAI_API_KEY"] = "sk-"  # replace with your actual key
+os.environ["OPENAI_API_KEY"] = "*"  # replace with your actual key
 
 # Create the LLM instance
 llm = ChatOpenAI(
