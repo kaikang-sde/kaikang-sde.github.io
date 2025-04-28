@@ -1,8 +1,8 @@
 ---
-title: Arrays in Java and Python
+title: Arrays in Java, Python and JavaScript
 date: 2025-03-03
 categories: [Algorithm, Array]
-tags: [Array, Java, Python]
+tags: [Array, Java, Python, JavaScript]
 author: kai
 ---
 
@@ -14,7 +14,6 @@ An **array** is a data structure that stores **multiple values** of the **same t
 - Arrays in Java are **fixed in size**, meaning their length is determined when they are created and cannot be changed.
 - Elements in an array are accessed using an **index**, starting from `0`.
 - Arrays can store **primitive data types** (`int`, `double`, `char`, etc.) or **objects** (`String`, `Integer`, `CustomClass`, etc.).
-
 
 ### When
 Use arrays when:
@@ -28,7 +27,6 @@ Use arrays when:
 - **Storing a list of temperatures:** `double[] temperatures = new double[7];`
 - **Representing a game board (e.g., chess, tic-tac-toe).**
 - **Processing large datasets where all elements are of the same type.**
-
 
 ### Why
 Arrays are useful because they:
@@ -136,10 +134,10 @@ System.out.println("Min: " + min);
 ## Arrays in Python
 
 ### What 
-An **array** in Python is a data structure that stores multiple values of the same type in a contiguous block of memory. It provides a way to group and manage a collection of elements using a single variable name.
+An **array** in Python is a data structure that stores multiple values of the **same type** in **a contiguous block of memory**. It provides a way to group and manage a collection of elements using a single variable name.
 
 - Unlike Java, Python does not have built-in **fixed-size arrays**. Instead, it offers:
-  - **`array` module** (fixed-type, memory-efficient arrays)
+  - **`array` module** (fixed-type, memory-efficient arrays, but NOT enforce fixed size.)
   - **NumPy arrays** (optimized for numerical computations)
 - Elements in an array are accessed using an **index**, starting from `0`.
 - Python `array.array` stores **only one data type**, ensuring memory efficiency.
@@ -179,9 +177,11 @@ from array import array
 
 # 1. Declare and allocate memory separately - 'i' means each element is a signed integer (4 bytes)
 arr1 = array('i', [0] * 5)  # Allocates memory for 5 elements, all initialized to 0
+print(arr1) # array('i', [0, 0, 0, 0, 0])
 
 # 2. Declare and initialize in one step - 'f' means each element is a floating point (4 bytes)
 arr2 = array('f', [1.0, 2.0, 3.0, 4.0, 5.0])
+print(arr2) # array('f', [1.0, 2.0, 3.0, 4.0, 5.0])
 ```
 
 #### Iterating Through an Array
@@ -249,6 +249,122 @@ print(f"Min: {min_value}")
 🔹 **Use `array.array` when** you need a memory-efficient, fixed-type data structure.  
 🔹 **Consider `list`** if you need dynamic resizing and support for mixed data types.  
 🔹 **For large-scale numerical operations**, consider using **NumPy arrays (`numpy.array`)** for better performance.
+
+
+---
+## Arrays in JavaScript
+
+### What
+An **array** in JavaScript is a dynamic, ordered collection of elements.  
+It provides a way to group and manage a collection of values under a single variable name.
+
+- Unlike Java or Python's `array.array`, JavaScript arrays are:
+  - **Dynamic**: their size can grow or shrink as needed.
+  - **Flexible**: they can hold **mixed types** (numbers, strings, objects, etc.).
+- Elements in an array are accessed using an **index**, starting from `0`.
+- JavaScript arrays are backed internally by a dynamic, contiguous memory model for performance.
+
+Additionally, for special use cases, JavaScript also offers **Typed Arrays** (e.g., `Int8Array`, `Float32Array`) to handle **fixed-type** memory-efficient operations.
+
+
+### When
+Use arrays when:
+- You need to store multiple elements in an ordered fashion.
+- You want **fast access** to elements using an index (`O(1)` time complexity).
+- You need to perform operations like sorting, searching, iterating, or modifying elements easily.
+- You want **dynamic resizing** without worrying about memory allocation manually.
+
+### Example Use Cases
+- **Managing a shopping cart list:** `["Apple", "Banana", "Orange"]`
+- **Storing a list of temperatures:** `[21.5, 22.0, 20.8]`
+- **Handling records like users, posts, comments in web apps.**
+- **Working with matrices, tables, and collections dynamically.**
+
+### Why
+Arrays are important because they:
+- Provide **fast random access** (`O(1)` time complexity).
+- Allow **dynamic and flexible storage** (no pre-sizing needed).
+- Support **powerful built-in methods** (`push()`, `pop()`, `map()`, `filter()`, `reduce()`).
+- Enable **easy iteration** with `for`, `forEach()`, `map()`, and other constructs.
+
+However, arrays also have **some limitations**:
+- **Not type-restricted**: can accidentally mix data types if not careful.
+- **Sparse arrays** (arrays with gaps) can cause unexpected behavior if not properly managed.
+
+
+### How - Code Example
+
+#### Different Ways to Declare and Initialize Arrays
+```javascript
+// 1. Simple declaration with initial values
+let arr1 = [1, 2, 3, 4, 5];
+
+// 2. Creating an empty array and filling it
+let arr2 = new Array(5);  // Creates [empty × 5]
+console.log(arr2);  // [ <5 empty items> ]
+arr2.fill(0);  
+console.log(arr2);  // [ 0, 0, 0, 0, 0 ]
+
+// 3. Mixed-type array
+let arr3 = [1, "Hello", true, { name: "Alice" }];
+console.log(arr3);  // [ 1, 'Hello', true, { name: 'Alice' } ]
+```
+
+#### Iterating Through an Array
+```javascript
+// Using a standard for loop
+for (let i = 0; i < arr1.length; i++) {
+    console.log(arr1[i]);
+}
+
+// Using forEach loop
+arr1.forEach(num => console.log(num));
+```
+
+#### Multidimensional Arrays
+```javascript
+// 2D Array Declaration
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+// Accessing elements
+console.log(matrix[1][2]); // Output: 6
+```
+
+#### Sorting an Array
+```javascript
+let arr4 = [5, 1, 4, 2, 8];
+
+// Default sort: Sorts an array in place. This method mutates the array and returns a reference to the same array.
+arr4.sort();  // [1, 2, 4, 5, 8] 
+
+// For numerical sort:
+arr4.sort((a, b) => a - b);  // Ascending numerical sort
+```
+
+
+#### Copying an Array
+```javascript
+// Method 1: Using slice()
+let copyArr = arr4.slice();
+
+// Method 2: Using spread operator
+let copyArr2 = [...arr4];
+```
+
+
+#### Finding Maximum and Minimum in an Array
+```javascript
+let max_value = Math.max(...arr4);
+let min_value = Math.min(...arr4);
+
+console.log(`Max: ${max_value}`); // Max: 8
+console.log(`Min: ${min_value}`); // Min: 1
+```
+
 
 ---
 
