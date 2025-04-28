@@ -1,7 +1,7 @@
 ---
 title: RAG project - AI-powered Document Q&A Assistant
-date: 2025-04-27
-order: 2
+date: 2025-04-28
+order: 1
 categories: [AI, LangChain]
 tags: [LangChain, RAG, Milvus, LLM]
 author: kai

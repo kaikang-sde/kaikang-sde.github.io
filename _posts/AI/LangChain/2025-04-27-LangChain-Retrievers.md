@@ -1,7 +1,6 @@
 ---
 title: LangChain Retrievers
 date: 2025-04-27
-order: 1
 categories: [AI, LangChain]
 tags: [LangChain, Retriever, Vector Store, RAG]
 permalink: /LangChain-Retrievers/
