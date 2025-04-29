@@ -102,7 +102,7 @@ OSI (Open Systems Interconnection) splits the networking stack into **7 distinct
 
 TCP/IP condenses the OSI layers into 4 broader categories, reflecting real-world protocol stacks.
 
-### Strengths:
+#### Strengths:
 - Easier to implement
 - Better maps to actual internet protocols (IP, TCP, HTTP)
 - Used in **SSL/TLS encryption**, **HTTPS**, and **DNS**
@@ -117,12 +117,14 @@ TCP/IP condenses the OSI layers into 4 broader categories, reflecting real-world
 
 ```text
 Application:   HTTP
-↓
-Encryption:    TLS / SSL
-↓
+    ↓
+(Encryption:    TLS / SSL)
+    ↓
 Transport:     TCP
-↓
-Network:       IP
+    ↓
+Internet:      IP
+    ↓
+Network:       MAC
 ```
 
 #### Load Balancing Comparison
