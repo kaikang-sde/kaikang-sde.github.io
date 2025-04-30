@@ -1,9 +1,9 @@
 ---
 title: Binding Tools to LLMs in LangChain
-date: 2025-04-29
+date: 2025-04-30
 order: 9
 categories: [AI, LangChain]
-tags: [LangChain, LLM, Agent, Tools]
+tags: [LangChain, LLM, Agent, Tools, tool_calls]
 author: kai
 ---
 
@@ -248,6 +248,126 @@ AIMessage(
 
 ![Tool Invocation](/assets/img/posts/AI/LangChain/ToolInvocation.png)
 ![Tool Result](/assets/img/posts/AI/LangChain/ToolResult.png)
+
+
+
+## 🔩 Complete LangChain tool-calling workflow
+
+```python
+import os
+from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import HumanMessage
+
+os.environ["OPENAI_API_KEY"] = "*"
+
+# Step 1: Define Tools
+
+
+@tool
+def add(a: int, b: int) -> int:
+    """Adds a and b."""
+    return a + b
+
+
+@tool
+def multiply(a: int, b: int) -> int:
+    """Multiplies a and b."""
+    return a * b
+
+
+# Step 2: Initialize the LLM and Bind Tools
+llm = ChatOpenAI(
+    model="gpt-4o-mini",
+    temperature=0.7,
+    openai_api_key=os.environ["OPENAI_API_KEY"]
+)
+
+tools = [add, multiply]
+llm_with_tools = llm.bind_tools(tools)
+
+
+# Step 3: Process User Query and Capture Tool Calls
+query = "What is the result of 3 * 12?"
+messages = [HumanMessage(query)]
+
+# Run initial inference
+ai_msg = llm_with_tools.invoke(messages)
+print("AI Message:", ai_msg)
+# AI Message: content='' 
+# additional_kwargs={'tool_calls': [{'id': 'call_SYRbTQAG2Jf7YEdYkuIe4D5p', 
+# 'function': {'arguments': '{"a":3,"b":12}', 'name': 'multiply'}, 'type': 'function'}], 'refusal': None} 
+# response_metadata={'token_usage': {'completion_tokens': 18, 'prompt_tokens': 80, 'total_tokens': 98, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_dbaca60df0', 'finish_reason': 'tool_calls', 'logprobs': None} id='run-3b05c214-5ad3-438b-b75a-5e3aeee57867-0' 
+# tool_calls=[{'name': 'multiply', 'args': {'a': 3, 'b': 12}, 'id': 'call_SYRbTQAG2Jf7YEdYkuIe4D5p', 'type': 'tool_call'}] usage_metadata={'input_tokens': 80, 'output_tokens': 18, 'total_tokens': 98, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}
+
+# The result of tool calls
+print("Tool Calls:", ai_msg.tool_calls)
+# Tool Calls: [{'name': 'multiply', 'args': {'a': 3, 'b': 12}, 'id': 'call_SYRbTQAG2Jf7YEdYkuIe4D5p', 'type': 'tool_call'}]
+
+# Add AI message to conversation history
+messages.append(ai_msg)
+
+
+# Step 4: Execute Tool(s) and Append Results
+# Tool dispatch logic
+for tool_call in ai_msg.tool_calls:
+    tool_name = tool_call["name"].lower() # Selected tool, not all tools
+    selected_tool = {"add": add, "multiply": multiply}[tool_name]
+
+    print(f"Selected Tool: {selected_tool.name}") # Selected Tool: multiply
+
+    # Execute the tool
+    tool_msg = selected_tool.invoke(tool_call)
+    print(f"Tool Result Message: {tool_msg}") 
+    # Tool Result Message: content='36' name='multiply' tool_call_id='call_qKmwSsjP6DHJWuwbg0sUR1lu'
+
+    # Add result to conversation
+    messages.append(tool_msg)
+
+
+print(messages)
+# [HumanMessage(content='What is the result of 3 * 12?', additional_kwargs={}, response_metadata={}), 
+# AIMessage(content='', additional_kwargs={'tool_calls': [{'id': 'call_ecteeaymOoy80jduziRkQzSI', 'function': {'arguments': '{"a":3,"b":12}', 'name': 'multiply'}, 'type': 'function'}], 'refusal': None}, response_metadata={'token_usage': {'completion_tokens': 18, 'prompt_tokens': 80, 'total_tokens': 98, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0392822090', 'finish_reason': 'tool_calls', 'logprobs': None}, id='run-e5ca74f2-b99c-45c3-8815-7172837d8d34-0', 
+# tool_calls=[{'name': 'multiply', 'args': {'a': 3, 'b': 12}, 'id': 'call_ecteeaymOoy80jduziRkQzSI', 'type': 'tool_call'}], usage_metadata={'input_tokens': 80, 'output_tokens': 18, 'total_tokens': 98, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}), 
+# ToolMessage(content='36', name='multiply', tool_call_id='call_ecteeaymOoy80jduziRkQzSI')]
+
+# Step 5: Feed Tool Results Back to LLM for Final Response
+# Final call with tool result injected
+final_response = llm_with_tools.invoke(messages)
+
+# Print final result
+print("Final LLM Response:", final_response.content) 
+# Final LLM Response: The result of \( 3 \times 12 \) is 36.
+```
+
+### Data flow
+```text
+User Input (query string)
+   ↓
+[HumanMessage(query)]
+   ↓
+Initial LLM Call → llm_with_tools.invoke(messages)
+   ↓
+LLM Output (AIMessage with .tool_calls)
+   └─ tool_calls = [{ name: "multiply", arguments: {"a": 3, "b": 12} }]
+   ↓
+Tool Execution
+   └─ selected_tool = multiply
+   └─ result = multiply(3, 12) → 36
+   └─ ToolMessage(content="36", name='multiply', tool_call_id=...)
+   ↓
+messages.append(ToolMessage)
+   ↓
+Second LLM Call → llm_with_tools.invoke(messages)
+   ↓
+Final Response (AIMessage with content)
+   └─ "The result of \( 3 \times 12 \) is 36."
+```
+
+
+
+
+
 
 
 
