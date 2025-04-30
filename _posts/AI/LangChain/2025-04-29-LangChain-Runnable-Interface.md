@@ -1,7 +1,6 @@
 ---
 title: LangChain - Runnable Interface
 date: 2025-04-29
-order: 2
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, ICEL, Async-processing]
 author: kai
