@@ -1,7 +1,6 @@
 ---
 title: RunnablePassthrough in LangChain
 date: 2025-04-30
-order: 3
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, RunnablePassthrough]
 author: kai

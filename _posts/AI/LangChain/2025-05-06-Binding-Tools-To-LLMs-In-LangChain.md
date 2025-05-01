@@ -1,7 +1,7 @@
 ---
 title: Binding Tools to LLMs in LangChain
-date: 2025-04-30
-order: 9
+date: 2025-05-01
+order: 6
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent, Tools, tool_calls]
 author: kai
@@ -262,8 +262,6 @@ from langchain_core.messages import HumanMessage
 os.environ["OPENAI_API_KEY"] = "*"
 
 # Step 1: Define Tools
-
-
 @tool
 def add(a: int, b: int) -> int:
     """Adds a and b."""

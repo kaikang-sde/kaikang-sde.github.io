@@ -1,7 +1,7 @@
 ---
 title: LangChain Built-in Toolkits and Web Search Integration
-date: 2025-04-30
-order: 10
+date: 2025-05-01
+order: 7
 categories: [AI, LangChain]
 tags: [LangChain, Tools, Web Search, AI Agent, LLM]
 author: kai
