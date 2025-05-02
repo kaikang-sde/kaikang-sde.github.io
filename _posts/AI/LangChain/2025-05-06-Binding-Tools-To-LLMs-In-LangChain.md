@@ -1,7 +1,7 @@
 ---
 title: Binding Tools to LLMs in LangChain
-date: 2025-05-01
-order: 6
+date: 2025-05-02
+order: 5
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent, Tools, tool_calls]
 author: kai

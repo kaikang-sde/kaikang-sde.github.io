@@ -1,7 +1,6 @@
 ---
 title: RunnableParallel in LangChain
 date: 2025-05-01
-order: 1
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, RunnableParallel]
 author: kai

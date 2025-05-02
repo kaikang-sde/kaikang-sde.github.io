@@ -1,7 +1,7 @@
 ---
 title: RunnableBranch in LangChain
-date: 2025-05-01
-order: 3
+date: 2025-05-02
+order: 2
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, RunnableBranch]
 author: kai
