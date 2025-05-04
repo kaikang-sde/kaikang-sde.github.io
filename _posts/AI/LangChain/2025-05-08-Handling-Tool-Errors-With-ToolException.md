@@ -1,7 +1,7 @@
 ---
 title: Handling Tool Errors with ToolException
-date: 2025-05-02
-order: 7
+date: 2025-05-04
+order: 5
 categories: [AI, LangChain]
 tags: [LangChain, ToolException, Error Handling, AI Agents, Tools]
 author: kai
