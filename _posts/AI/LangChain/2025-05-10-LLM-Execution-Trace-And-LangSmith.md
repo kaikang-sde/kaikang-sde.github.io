@@ -1,7 +1,7 @@
 ---
 title: LLM Execution Trace and LangSmith
-date: 2025-05-04
-order: 7
+date: 2025-05-05
+order: 6
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent, LangSmith, Debugging]
 author: kai

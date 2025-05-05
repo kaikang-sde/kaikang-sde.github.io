@@ -1,7 +1,6 @@
 ---
 title: Large Language Model (LLM) Agents
 date: 2025-05-04
-order: 1
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent]
 author: kai
