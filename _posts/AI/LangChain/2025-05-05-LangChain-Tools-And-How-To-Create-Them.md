@@ -1,7 +1,6 @@
 ---
 title: LangChain Tools and How to Create Them
-date: 2025-05-05
-order: 1
+date: 2025-05-06
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent, Tools]
 author: kai
