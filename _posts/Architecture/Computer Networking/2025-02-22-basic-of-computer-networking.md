@@ -203,7 +203,7 @@ A **network layered model** organizes how data is transmitted from one computer 
 |                             | 6. Presentation Layer | *(Part of Application)*      | Telnet, SNMP       |
 |                             | 5. Session Layer      | *(Part of Application)*      | SMTP, **DNS**      |
 | **Operating System (Kernel)**| 4. Transport Layer   | 3. Transport Layer           | **TCP, UDP**       |
-|                             | 3. Network Layer      | 2. Internet Layer            | IP, ICMP, ARP, RARP |
+|                             | 3. Network Layer      | 2. Internet Layer            | **IP**, ICMP, ARP, RARP |
 | **Network Devices & Drivers**| 2. Data Link Layer   | 1. Network Access Layer      | PPP, Ethernet       |
 |                             | 1.Physical Layer      | *(Part of Network Access Layer)* | IEEE 802.1A, IEEE 802.2 ~ IEEE 802.11 |
 
@@ -219,12 +219,12 @@ The core goal of the application layer is to:
 
 **Sending a Packet (Data Flow: Top to Bottom)**
 ```text
-[Application Layer]  — Message -> msg: Hi
-↓
-[Transport Layer]    — Adds Port (Process Info) -> TCP Header: msg: Hi
-↓
-[Internet Layer]      — Adds IP (Host Info) -> IP Header: TCP Header: msg: Hi
-↓
+[Application Layer]    — Message -> msg: Hi
+        ↓
+[Transport Layer]      — Adds Port (Process Info) -> TCP Header: msg: Hi
+        ↓
+[Internet Layer]       — Adds IP (Host Info) -> IP Header: TCP Header: msg: Hi
+        ↓
 [Network Access Layer] — Converts to bits and sends via NIC (Network Interface Card ) -> Frame Header: IP Header: TCP Header: msg: Hi : Frame Trailer
 ```
 
@@ -232,17 +232,17 @@ The core goal of the application layer is to:
 
 ```text
 [Network Access Layer]  — Frame checking (MAC). Reads bits from wire -> Frame Header: IP Header: TCP Header: msg: Hi : Frame Trailer
-↑
+        ↑
 [Internet Layer]        — IP check (Host address) -> IP Header: TCP Header: msg: Hi 
-↑
+        ↑
 [Transport Layer]       — Port check (Process address) -> TCP Header: msg: Hi
-↑
+        ↑
 [Application Layer]     — Final message consumed by app -> msg: Hi
 ```
 
 ### Real-World Analogy: Sending Ice Cream to a Friend
 
-🎄 It's Christmas. Kai (in PA) wants to send a box of ice cream to Jojo (in VA), who lives with Ahsh.
+🎄 It's Christmas. Kai (in PA) wants to send a box of ice cream to Jojo (in VA), who lives with Bing.
 
 - 📦 **The box of ice cream** = Application data
 - 🏢 **PA → VA logistics center** = Network Layer (IP-based routing between hosts)
