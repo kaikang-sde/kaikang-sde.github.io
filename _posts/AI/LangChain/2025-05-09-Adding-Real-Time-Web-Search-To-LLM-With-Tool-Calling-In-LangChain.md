@@ -1,6 +1,6 @@
 ---
 title: Adding Real-Time Web Search to LLM with Tool Calling in LangChain
-date: 2025-05-05
+date: 2025-05-07
 order: 5
 categories: [AI, LangChain]
 tags: [LangChain, Tool Integration, Web Search, LLM Agent, AI Q&A]

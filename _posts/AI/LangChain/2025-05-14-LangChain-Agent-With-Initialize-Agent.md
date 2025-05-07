@@ -1,6 +1,6 @@
 ---
 title: LangChain Agents with initialize_agent
-date: 2025-05-05
+date: 2025-05-07
 order: 10
 categories: [AI, LangChain]
 tags: [LangChain, LLM, ReAct, AgentExecutor, Tool Calling]
