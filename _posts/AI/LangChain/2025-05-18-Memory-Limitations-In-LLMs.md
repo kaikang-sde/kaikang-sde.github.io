@@ -1,7 +1,7 @@
 ---
 title: Memory Limitations in LLMs
-date: 2025-05-07
-order: 14
+date: 2025-05-08
+order: 11
 categories: [AI, LangChain]
 tags: [LangChain, Memory, Context-window, Personalization]
 author: kai

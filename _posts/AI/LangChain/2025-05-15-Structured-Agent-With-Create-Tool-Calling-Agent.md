@@ -1,7 +1,7 @@
 ---
 title: Structured Agent with create_tool_calling_agent
-date: 2025-05-07
-order: 11
+date: 2025-05-08
+order: 8
 categories: [AI, LangChain]
 tags: [LangChain, LLM, AI Agent, create_tool_calling_agent]
 author: kai
