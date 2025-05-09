@@ -1,7 +1,7 @@
 ---
 title: A Smart Q&A Assistant with LLM - Document + Web Search Integration
-date: 2025-05-07
-order: 13
+date: 2025-05-08
+order: 10
 categories: [AI, LangChain]
 tags: [LangChain, Milvus, Web Search, Agent, VectorDB, ReAct, ChatOpenAI]
 author: kai
