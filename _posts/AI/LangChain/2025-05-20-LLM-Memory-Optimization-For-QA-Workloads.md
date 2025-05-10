@@ -1,7 +1,6 @@
 ---
 title: LLM Memory Optimization for QA Workloads
-date: 2025-05-09
-order: 13
+date: 2025-05-20
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Memory, RAG, Token Optimization, Milvus]
 author: kai

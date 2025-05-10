@@ -1,7 +1,6 @@
 ---
 title: A Travel Planning Agent with LangChain's ReAct Framework
-date: 2025-05-09
-order: 9
+date: 2025-05-16
 categories: [AI, LangChain]
 tags: [LangChain, LLM, AI Agent, ReAct]
 author: kai
