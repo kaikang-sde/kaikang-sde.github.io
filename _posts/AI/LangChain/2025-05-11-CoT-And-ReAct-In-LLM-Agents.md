@@ -1,7 +1,6 @@
 ---
 title: CoT and ReAct in LLM Agents
-date: 2025-05-09
-order: 4
+date: 2025-05-11
 permalink: /CoT-And-ReAct-In-LLM-Agents/
 categories: [AI, LangChain]
 tags: [LangChain, AI Agents, CoT, ReAct, Reasoning]

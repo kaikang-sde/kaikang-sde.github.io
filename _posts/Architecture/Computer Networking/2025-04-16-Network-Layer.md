@@ -1,7 +1,7 @@
 ---
 title: Network Layer
 date: 2025-04-16
-categories: [Architecture, Computer Networking, OSI & TCP/IP, Network Layer, Internet Layer]
+categories: [Architecture, Computer Networking]
 tags: [computer networking, Network Layer, Internet Layer, IP, IPv4]
 author: kai
 ---

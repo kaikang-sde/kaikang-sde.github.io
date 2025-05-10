@@ -1,7 +1,6 @@
 ---
 title: MessagesPlaceholder in LangChain
-date: 2025-05-09
-order: 14
+date: 2025-05-21
 categories: [AI, LangChain]
 tags: [LangChain, MessagesPlaceholder, ChatPromptTemplate, LLM, Memory]
 author: kai

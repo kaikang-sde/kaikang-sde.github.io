@@ -1,7 +1,6 @@
 ---
 title: LangChain AgentExecutor
-date: 2025-05-09
-order: 6
+date: 2025-05-13
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent, AgentExecutor]
 author: kai

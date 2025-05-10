@@ -1,8 +1,8 @@
 ---
 title: OSI & TCP/IP Network Layer Models
 date: 2025-02-22
-categories: [Architecture, Computer Networking, OSI & TCP/IP]
-tags: [computer networking]
+categories: [Architecture, Computer Networking]
+tags: [computer networking, OSI & TCP/IP]
 permalink: /basic-of-computer-networking/
 author: kai
 ---
@@ -34,7 +34,7 @@ In modern networking, the **layered architecture** is the foundation that makes 
 | 1. Network Interface | Physical transmission of data (hardware & drivers)          | Ethernet, Wi-Fi   |
 
 
-![Networking Models](/assets/img/posts/architecture/NetworkModel.png)
+![Networking Models](/assets/img/posts/Architecture/ComputerNetworking/NetworkModel.png)
 
 
 ## 🤔 Why Do We Need Layering?
@@ -69,7 +69,8 @@ Each layer follows **Single Responsibility Principle**, which aligns with:
 ## 🧱 Encapsulation: Like Russian Dolls
 
 Each layer **wraps the previous one**, creating a **nested packet** structure:
-![Networking Models](/assets/img/posts/architecture/SimpleNetworkPacketFormat.png)
+
+![Nested Packet](/assets/img/posts/Architecture/ComputerNetworking/SimpleNetworkPacketFormat.png)
 
 This **modular design** enables:
 

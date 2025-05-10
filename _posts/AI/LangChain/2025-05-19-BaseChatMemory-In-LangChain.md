@@ -1,7 +1,6 @@
 ---
 title: BaseChatMemory in LangChain - Customizable Memory for LLM Applications
-date: 2025-05-09
-order: 12
+date: 2025-05-19
 categories: [AI, LangChain]
 tags: [LangChain, LLM Memory, AI Agent, ChatHistory]
 author: kai
