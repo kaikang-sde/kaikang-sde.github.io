@@ -30,8 +30,8 @@ In modern networking, the **layered architecture** is the foundation that makes 
 |------------------|--------------------------------------------------------------|-------------------|
 | 4. Application Layer | High-level protocols for communication between applications | HTTP, FTP, SMTP   |
 | 3. Transport Layer   | Reliable/unreliable data transmission between hosts         | TCP, UDP          |
-| 2. Internet Layer    | Routing and addressing across networks                      | IP, ICMP          |
-| 1. Network Interface | Physical transmission of data (hardware & drivers)          | Ethernet, Wi-Fi   |
+| 2. Internet Layer (IP Layer) | Routing and addressing across networks                      | IP, ICMP          |
+| 1. Network Access Layer (Link Layer) | Physical transmission of data (hardware & drivers)          | Ethernet, Wi-Fi, PPP   |
 
 
 ![Networking Models](/assets/img/posts/Architecture/ComputerNetworking/NetworkModel.png)
