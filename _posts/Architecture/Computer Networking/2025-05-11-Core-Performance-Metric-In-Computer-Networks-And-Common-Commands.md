@@ -3,6 +3,7 @@ title: Core Performance Metrics in Computer Networks and Common Commands
 date: 2025-05-11
 categories: [Architecture, Computer Networking]
 tags: [computer networking, Linux, Performance, CLI, ifconfig, netstat]
+permalink: /Core-Performance-Metric-In-Computer-Networks-And-Common-Commands/
 author: kai
 ---
 
