@@ -136,7 +136,7 @@ The **maximum number of queued `ESTABLISHED` connections** is controlled by:
 
 ### Check Current TCP Accept Queue Size
 To monitor the **full connection (accept) queue** size in Linux, we can use the `ss` command—a modern replacement for `netstat`.
-- ss -lnt
+- `ss -lnt`
     - -l: Show only listening sockets
 	- -n: Show numeric addresses/ports (skip DNS resolution)
 	- -t: Show TCP sockets only
@@ -149,6 +149,113 @@ To monitor the **full connection (accept) queue** size in Linux, we can use the 
 | `State`     | Should be `LISTEN` for server ports that are actively waiting for connections.  |
 | `Recv-Q`    | Number of **fully established connections** currently **waiting to be accepted**. |
 | `Send-Q`    | The **maximum size** of the accept queue. Often `128` by default (kernel limit). |
+
+
+### Check If the TCP Accept Queue Is Overflowing
+In high-concurrency environments, it's important to monitor whether the **Accept Queue** (also known as the **full connection queue**) is experiencing overflow. When too many fully established connections are waiting to be accepted by the application, new connections may be dropped.
+
+- `netstat -s | grep TCPBacklogDrop`
+- Sample Output: TCPBacklogDrop: 36
+	- This means 36 fully established TCP connections were dropped because the Accept queue was full.
+	- If the number keeps increasing over time, your application cannot call accept() fast enough, or your queue size is too small.
+
+### What Happens When the TCP Accept Queue Is Full
+When a server's **Accept Queue** (the full connection queue) is full, it can't accept any more fully established connections. How the server reacts to this situation depends on the system kernel parameter:
+- `cat /proc/sys/net/ipv4/tcp_abort_on_overflow`
+- Output: 0 or 1
+    - **0 (default)**: Silently drops the final ACK from the client. The client assumes a timeout and retries, thinking the server is just slow or unresponsive.
+        - Recommended in production environments. It’s more graceful, avoiding aggressive connection resets, especially under heavy load.
+    - **1**: Actively sends a TCP RST (Reset) back to the client. This immediately closes the connection and informs the client of rejection.
+        - Useful for diagnostics or debugging. If the client receives a `connection reset by peer error`, it can immediately detect that the server is overwhelmed — helping identify backlog saturation issues.
+
+## 🎯 Core Insight
+
+Both **half-open connection queues (SYN queue)** and **fully-established connection queues (accept queue)** have **maximum length limits**. If these queues overflow:
+
+- The **Linux kernel silently drops packets** or
+- Sends a **TCP RST** to reject the connection
+
+### Why This Matters
+
+For **short-lived connection applications**, such as:
+- Reverse proxies (Nginx)
+- Web services with frequent PHP requests
+- API endpoints with high concurrency
+
+the chances of queue overflow are **significantly higher**, especially under burst traffic.
+
+### Symptoms of Overflow
+
+When the queues are full:
+- **New client connections fail** to establish
+- **`connection reset by peer`** appears in logs
+- CPU, thread, and memory usage may look normal
+- But throughput and QPS (queries per second) **plateau unexpectedly**
+
+This makes queue overflows a **silent bottleneck**, often overlooked during performance tuning.
+
+### Tips for Diagnosis
+
+- Monitor with:
+  - `netstat -s | grep LISTEN` → detects dropped SYNs
+  - `netstat -s | grep TCPBacklogDrop` → detect accept queue overflows
+- Inspect `/proc/sys/net/core/somaxconn` and `/proc/sys/net/ipv4/tcp_max_syn_backlog`
+- Use `ss -lnt` to observe current connection queue utilization
+
+### Recommendations
+
+- **Increase queue sizes** where appropriate:
+  ```bash
+  sysctl -w net.core.somaxconn=4096
+  sysctl -w net.ipv4.tcp_max_syn_backlog=4096
+  ```
+- **For load testing or debugging**:
+    - `echo 1 > /proc/sys/net/ipv4/tcp_abort_on_overflow`
+
+## 🛡 Flood Attack - Basic Mitigation: TCP SYN Cookies
+**SYN Cookies** help defend against SYN floods **without consuming server memory** for half-open connections.
+
+### How It Works
+
+- When `tcp_syncookies` is enabled, the **server does not allocate a TCB (Transmission Control Block)** immediately.
+- Instead, it calculates a **hash (cookie)** using:
+  - Source IP, source port
+  - Destination IP, destination port
+  - A secret server-side random number
+- This hash is used as the **initial sequence number** in the SYN-ACK packet.
+- If the client replies with the final ACK, the server recomputes the hash and **verifies it**.
+  - If valid: A real connection is established
+  - If invalid: It is ignored
+
+### Benefits
+
+- **No memory allocation** until final ACK — prevents queue exhaustion.
+- **Stateless validation** of legitimate handshakes.
+
+### Drawbacks
+
+- **Extra CPU overhead** for computing hashes
+- Vulnerable to **ACK flood attacks** (CPU exhaustion via fake ACKs)
+
+
+### Enabling SYN Cookies on Linux
+- Check with: `sysctl net.ipv4.tcp_syncookies`
+- Configure in /etc/sysctl.conf: `net.ipv4.tcp_syncookies = 1`
+    - 0 → Disabled
+	- 1 → Enabled only when SYN backlog overflows
+	- 2 → Always enabled (even if not overflowing)
+- Apply changes:` sudo sysctl -p`
+
+## 🔚 Other Mitigation Techniques
+1. Increase Queue Sizes
+- Half-open (SYN) queue: `net.ipv4.tcp_max_syn_backlog = 4096`
+- Accept (full) queue: `net.core.somaxconn = 4096`
+
+2. Reduce SYN-ACK Retries
+- Linux retries SYN-ACK multiple times before giving up. To limit retry attempts: `sysctl -w net.ipv4.tcp_synack_retries=2`
+
+3. Use DDoS Protection Services
+- If under large-scale SYN flood or DDoS, hardware-based solutions or cloud-based traffic scrubbing (e.g., Cloudflare, Alibaba Cloud Anti-DDoS) are required.
 
 
 ## 🛠️ Detecting with the `ss` Command
@@ -168,6 +275,7 @@ To monitor the **full connection (accept) queue** size in Linux, we can use the 
 | `-n`   | Show **numeric** IP addresses and port numbers (skip DNS resolution) |
 | `-t`   | Display **TCP connections** only                 |
 | `-u`   | Display **UDP sockets** only                     |
+
 
 
 
