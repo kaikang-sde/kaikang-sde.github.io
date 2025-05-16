@@ -2,6 +2,7 @@
 title: Python Model Management with Pydantic
 date: 2025-04-03
 categories: [AI, LangChain]
+permalink: /Python-Data-Validation-With-Pydantic/
 tags: [LangChain, Pydantic, LLM, Prompt Engineering, Parsing]
 author: kai
 ---
