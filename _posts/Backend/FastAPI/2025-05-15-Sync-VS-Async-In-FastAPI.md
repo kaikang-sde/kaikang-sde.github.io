@@ -1,7 +1,6 @@
 ---
 title: Sync vs Async in FastAPI
-date: 2025-05-14
-order: 2
+date: 2025-05-15
 categories: [Backend, FastAPI]
 tags: [FastAPI, AsyncIO, Python, Backend Development]
 author: kai
@@ -313,6 +312,176 @@ Using **a client instance** provides:
 
 
 
+## 🧵 Examples
+
+###  Synchronous Endpoint (Blocking)
+
+**Behavior**:
+- The time.sleep(3) blocks the entire event loop/thread.
+- No other request can be processed during this time (if running in a single worker).
+- Suitable for CPU-bound or small-scale applications.
+
+```python
+from fastapi import FastAPI
+import time
+
+app = FastAPI()
+
+@app.get("/sync_func")
+def sync_endpoint():
+    print("Task 1 starts")     # Immediate execution
+    time.sleep(3)              # Blocks the thread for 3 seconds
+    print("Task 2 starts")     # Executes after blocking
+    return {"status": "done"}
+```
+
+
+### Asynchronous Endpoint (Non-Blocking)
+
+**Behavior**:
+- await asyncio.sleep(3) yields control back to the event loop.
+- While waiting, FastAPI can serve other incoming requests.
+- Best for I/O-bound operations: DB queries, HTTP calls, file access
+
+```python
+import asyncio
+
+@app.get("/async_func")
+async def async_endpoint():
+    print("Task A starts")         # Immediate
+    await asyncio.sleep(3)         # Non-blocking wait
+    print("Task B starts")         # Resumes after 3 seconds
+    return {"status": "done"}
+```
+
+
+### Concurrent External API Calls in FastAPI
+
+```python
+import asyncio
+from datetime import datetime
+import httpx
+import time
+from fastapi import FastAPI
+
+app = FastAPI()
+
+# Async HTTP GET requester
+async def fetch_data(url: str):
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url)
+        return response.json()
+
+@app.get("/test1")
+async def test1():
+    print(f"test1 start at {datetime.now().strftime('%H:%M:%S.%f')}")
+    await asyncio.sleep(3)  
+    print(f"test1 end at {datetime.now().strftime('%H:%M:%S.%f')}")
+    return {"status": "done"}
+
+@app.get("/test2")
+async def test2():
+    print(f"test2 start at {datetime.now().strftime('%H:%M:%S.%f')}")
+    await asyncio.sleep(4)  
+    print(f"test2 end at {datetime.now().strftime('%H:%M:%S.%f')}")
+    return {"status": "done"}
+
+# FastAPI route that concurrently fetches data from multiple URLs
+@app.get("/kkblogs")
+async def get_news():
+    print("kkblogs")
+    start = time.time()
+
+    urls = [
+        "https://api-v2.xdclass.net/api/funny/v1/get_funny",
+        "https://api-v2.xdclass.net/api/banner/v1/list?location=home_top_ad",
+        "https://api-v2.xdclass.net/api/rank/v1/hot_product",
+        "http://localhost:8000/test1",
+        "http://localhost:8000/test2",
+    ]
+
+    # Create coroutine tasks for all URLs
+    tasks = [fetch_data(url) for url in urls]
+
+    # Run all tasks concurrently
+    results = await asyncio.gather(*tasks)
+
+    print(f"⏱️ Total elapsed time: {time.time() - start:.2f} seconds")
+    return results
+
+# kkblogs
+# test1 start at 08:24:10.109683
+# test2 start at 08:24:10.109961
+# test1 end at 08:24:13.110744
+# INFO:     127.0.0.1:57615 - "GET /test1 HTTP/1.1" 200 OK
+# test2 end at 08:24:14.111182
+# INFO:     127.0.0.1:57618 - "GET /test2 HTTP/1.1" 200 OK
+# ⏱️ Total elapsed time: 4.05 seconds
+# INFO:     127.0.0.1:57611 - "GET /kkblogs HTTP/1.1" 200 OK
+```
+
+## ❗ Common Mistake: Blocking Calls in Async FastAPI Routes
+
+```python
+import time
+from fastapi import FastAPI
+
+app = FastAPI()
+
+#  Incorrect usage: time.sleep() blocks the entire event loop
+@app.get("/wrong")
+async def bad_example():
+    time.sleep(5)  # Blocks the event loop, degrades performance
+    return {"error": "This blocks everything!"}
+```
+
+- time.sleep() is a synchronous function.
+- When called inside an async route, it blocks the entire event loop, causing other concurrent tasks to hang.
+- This defeats the purpose of using async in the first place!
+
+### Correct Usage: Use Asynchronous Alternatives
+
+```python
+import asyncio
+
+# Correct: Use asyncio.sleep to avoid blocking
+@app.get("/right1")
+async def good_example():
+    await asyncio.sleep(5)  #  Non-blocking sleep
+    return {"status": "Async sleep completed"}
+```
+- await asyncio.sleep() is non-blocking.
+- It yields control back to the event loop, allowing other tasks to run during the wait time.
+- Perfect for I/O-bound wait operations like API calls, DB access, or throttling delays.
+
+
+## ✅ FastAPI Routing & Performance Best Practices
+
+### When You **Must Use `async def`**
+Use `async def` routes when your logic involves **non-blocking I/O** or **concurrent tasks**:
+1. Calling async libraries with `await`
+2. WebSocket communication
+3. Long-running background tasks
+
+### When It’s Better to Use def (Synchronous)
+Not everything needs to be async. In fact, using async unnecessarily can slow things down or complicate the code.
+
+Use synchronous def routes when:
+1. Performing pure CPU-bound computations
+2. Using synchronous database drivers
+3. Fast-return endpoints
+
+### Performance Optimization Tips
+1. Keep async def routes lightweight
+- Avoid CPU-heavy work inside async routes
+- Use await for real async I/O (e.g., httpx, asyncpg)
+
+2. Offload Long-Running CPU Tasks
+- Use threads or process pools for heavy synchronous operations.
+
+3. Use Connection Pools
+- Use HTTP connection pools with httpx.AsyncClient
+- Use database connection pooling (e.g., with Databases or SQLAlchemy async)
 
 
 

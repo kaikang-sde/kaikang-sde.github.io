@@ -1,7 +1,6 @@
 ---
 title: FastAPI - A Modern Web Framework
 date: 2025-05-14
-order: 1
 categories: [Backend, FastAPI]
 tags: [FastAPI, Python, Web Development, Async, API Design, HTTP]
 author: kai
