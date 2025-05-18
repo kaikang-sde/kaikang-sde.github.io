@@ -1,7 +1,6 @@
 ---
 title: FastAPI with Pydantic
 date: 2025-05-16
-order: 2
 categories: [Backend, FastAPI]
 tags: [FastAPI, Pydantic, Python, API, Data Validation]
 author: kai
