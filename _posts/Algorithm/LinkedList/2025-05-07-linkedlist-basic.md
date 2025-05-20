@@ -94,3 +94,8 @@ function ListNode(val, next) {
 | **Deletion (Middle)**  | Costly: shift elements → `O(n)`      | Efficient: pointer change → `O(1)` (with node reference) |
 | **Cache Friendliness** | High (data stored contiguously)      | Low (non-contiguous, more pointer chasing) |
 | **Pointer Overhead**   | None                                 | Each node stores a `next` pointer      |
+
+
+---
+
+Stay tuned for more insights into algorithm fundamentals!
