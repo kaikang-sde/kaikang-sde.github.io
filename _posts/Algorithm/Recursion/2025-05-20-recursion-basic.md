@@ -6,7 +6,7 @@ tags: [Recursion, Function Design, Data Structures]
 author: kai
 ---
 
-## 🔄 What Is Recursion?
+## 🔄 Recursion
 Recursion is not an algorithm in itself—it's a **programming technique** where a function calls itself to solve a subproblem. Whether it's used in backtracking, divide-and-conquer, or tree traversal, understanding recursion is key to mastering algorithm design.
 
 > **Recursion** = Going deeper (breaking a problem down), then returning (combining results)
@@ -144,7 +144,7 @@ Each function call creates a new stack frame.
 - Improper recursion (e.g. missing base case) can cause a **stack overflow**.
 
 
-## 🧠 What is Divide and Conquer?
+## 🧠 Divide and Conquer
 Divide and Conquer is an **algorithmic design pattern** that breaks a problem into smaller subproblems, **solves them recursively**, and then **merges the results**.
 
 1. **Divide** the problem into smaller subproblems of the same type.
