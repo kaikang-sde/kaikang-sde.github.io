@@ -1,5 +1,5 @@
 ---
-title: TCP Transmission Optimization - Nagle Algorithm and Delayed ACK Explained
+title: TCP Transmission Optimization - Nagle Algorithm and Delayed ACK
 date: 2025-05-27
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, TCP, Nagle, Delayed-ACK, Kafka Producer Optimization]
