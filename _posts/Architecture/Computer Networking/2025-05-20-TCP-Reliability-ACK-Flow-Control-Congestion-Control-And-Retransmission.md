@@ -6,7 +6,7 @@ tags: [Computer Networking, TCP, Reliability, FlowControl, CongestionControl, Re
 author: kai
 ---
 
-# TCP Reliability: ACK, Flow Control, Congestion Control, and Retransmission"
+# 🛜 TCP Reliability: ACK, Flow Control, Congestion Control, and Retransmission"
 TCP (Transmission Control Protocol) is designed to provide **reliable, ordered, and error-checked delivery of data** between applications. Its reliability is built on four major mechanisms:
 
 - **Acknowledgements (ACK)**  

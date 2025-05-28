@@ -2,7 +2,7 @@
 title: TCP Three-Way Handshake and TCB
 date: 2025-05-12
 categories: [Architecture, Computer Networking]
-tags: [Computer Networking, TCP, Networking, Transport Layer, Three-Way Handshake]
+tags: [Computer Networking, TCP, Transport Layer, Three-Way Handshake]
 author: kai
 ---
 
