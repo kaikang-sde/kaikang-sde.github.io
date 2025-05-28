@@ -2,7 +2,7 @@
 title: MTU and MSS
 date: 2025-05-10
 categories: [Architecture, Computer Networking]
-tags: [computer networking, MTU, MSS]
+tags: [Computer Networking, MTU, MSS]
 author: kai
 ---
 

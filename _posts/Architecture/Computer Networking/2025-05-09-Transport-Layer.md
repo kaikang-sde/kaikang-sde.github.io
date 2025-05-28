@@ -2,7 +2,7 @@
 title: Transport Layer
 date: 2025-05-09
 categories: [Architecture, Computer Networking]
-tags: [computer networking, Transport Layer, TCP, UDP]
+tags: [Computer Networking, Transport Layer, TCP, UDP]
 author: kai
 ---
 
