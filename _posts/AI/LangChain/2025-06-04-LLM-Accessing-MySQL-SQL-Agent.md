@@ -283,68 +283,171 @@ db = SQLDatabase.from_uri(
 ### Creating the Toolkit
 
 ```python
-from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
-from langchain.chat_models import ChatOpenAI
-
-toolkit = SQLDatabaseToolkit(
-    db=db,
-    llm=ChatOpenAI(temperature=0, model="gpt-4")
-)
-```
-
-
-## 🧪 Case Study: Building a SQL Agent with LangChain (Pseudocode Demo)
-
-```python
 from langchain_community.utilities.sql_database import SQLDatabase
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
 from langchain_community.agent_toolkits.sql.base import create_sql_agent
 from langchain.agents import AgentType
 
 # Step 1: Connect to Your MySQL Database
 db = SQLDatabase.from_uri(
-    "mysql+pymysql://root:xdclass.net168@39.108.115.128:3306/dcloud_aipan"
+    "mysql+pymysql://root:**PWD**@54.163.**.***:3306/kcloud_aidrive",
+    custom_table_info={"account": "Accounts table for querying accounts",
+                       "account_file": "query files and file content",
+                       "storage": "Storage table for querying storage"},  # Custom table description
 )
 
 # Step 2: Initialize Your LLM
 llm = ChatOpenAI(
+    model="gpt-4o-mini",
     temperature=0,
-    model="gpt-4",
-    openai_api_key="sk-your-key"
+    openai_api_key="*"
 )
 
 # Step 3: Bundle the Toolkit
 toolkit = SQLDatabaseToolkit(db=db, llm=llm)
+print(f"The number of tools:{len(toolkit.get_tools())}")
+print("The list of tools:", [tool.name for tool in toolkit.get_tools()])
+
 
 # Step 4: Create the SQL Agent
 agent = create_sql_agent(
     llm=llm,
     toolkit=toolkit,
+    prefix="""You are a professional cloud storage query assistant. Please follow these rules:
+	1.	All responses must be in English.
+	2.	Keep answers clear and concise, avoiding technical jargon.
+	3.	If a query fails, try to rephrase it in a simpler way and attempt again.
+	4.	When returning data results, explain them in plain and easy-to-understand language.
+	5.	If the user's question is unclear, proactively ask for more details.""",
     verbose=True,  # Show reasoning steps and SQL
     agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
     handle_parsing_errors=True  # Auto-handle SQL/response parsing issues
 )
 
-# Step 5: Query with Natural Language
+
+# Step 5: Define a Function to Handle User Queries
+def ask_question(question):
+    try:
+        print(f"\nHandling your question:{question}")
+        response = agent.invoke({"input": question})
+        return response["output"]
+    except Exception as e:
+        print(f"System prompt: Encountered a technical issue while processing the query.")
+        return "Sorry, the system is currently unable to process your request. Please try to describe your question in a simpler way, or try again later."
+
+
+# Testing
 questions = [
-    "How many customers we have?",
-    "The top 5 products and their total sales amount",
+    "What is the phone number for username kai",  # Complex question since we do not provide any context, such as table names or column names
 ]
 
-for question in questions:
-    print(f"\nQuestion:{question}")
-    response = agent.invoke({"input": question})
-    print(f"Answer:{response['output']}")
+for q in questions:
+    answer = ask_question(q)
+    print(f"\nQuestion:{q}")
+    print(f"Answer:{answer}")
+    print("-" * 50)
+
 ```
 
 
+### Execution Logs
+```text
+Handling your question:What is the phone number for username kai
 
 
+> Entering new SQL Agent Executor chain...
+Action: sql_db_list_tables  
+Action Input: ""  account, account_file, file, file_chunk, file_suffix, file_type, share, share_file, storageI see that there are several tables in the database. The "account" table likely contains user information, including usernames and phone numbers. I will check the schema of the "account" table to find the relevant fields.  
+Action: sql_db_schema  
+Action Input: "account"  Accounts table for querying accountsI need to check the specific fields in the "account" table to find the phone number associated with the username "kai."  
+Action: sql_db_schema  
+Action Input: "account"  Accounts table for querying accountsIt seems that I need to clarify the schema of the "account" table to find the specific fields, including the phone number. I will check the schema again to ensure I have the correct information.  
+Action: sql_db_schema  
+Action Input: "account"  Accounts table for querying accountsIt seems I am not getting the specific details of the "account" table schema. I will try to list the tables again to ensure I have the correct information before proceeding.  
+Action: sql_db_list_tables  
+Action Input: ""  account, account_file, file, file_chunk, file_suffix, file_type, share, share_file, storageIt seems that I am unable to retrieve the schema details for the "account" table. I will try to check the query for retrieving the phone number for the username "kai" directly, but first, I need to ensure that the query is correct. 
+
+Action: sql_db_query_checker  
+Action Input: "SELECT phone_number FROM account WHERE username = 'kai';"  ```sql
+SELECT phone_number FROM account WHERE username = 'kai';
+```The query to retrieve the phone number for the username "kai" is correct. I will now execute this query to get the result.  
+Action: sql_db_query  
+Action Input: "SELECT phone_number FROM account WHERE username = 'kai';"  Error: (pymysql.err.OperationalError) (1054, "Unknown column 'phone_number' in 'field list'")
+[SQL: SELECT phone_number FROM account WHERE username = 'kai';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)It seems that the "phone_number" column does not exist in the "account" table. I need to check the schema of the "account" table to find the correct field for the phone number. 
+
+Action: sql_db_schema  
+Action Input: "account"  Accounts table for querying accountsIt appears that I am still unable to retrieve the schema details for the "account" table. I will try to check the fields in the "account" table again to find the correct field for the phone number. 
+
+Action: sql_db_schema  
+Action Input: "account"  Accounts table for querying accountsIt seems that I am unable to retrieve the schema details for the "account" table, which is preventing me from identifying the correct field for the phone number. I will try a different approach by checking the available fields in the "account" table directly.
+
+Action: sql_db_query_checker  
+Action Input: "SHOW COLUMNS FROM account;"  SHOW COLUMNS FROM account;The query to show the columns in the "account" table is correct. I will now execute this query to get the result.  
+Action: sql_db_query  
+Action Input: "SHOW COLUMNS FROM account;"  [('id', 'bigint', 'NO', 'PRI', None, ''), ('username', 'varchar(255)', 'NO', '', None, ''), ('password', 'varchar(255)', 'NO', '', None, ''), ('avatar_url', 'varchar(255)', 'YES', '', None, ''), ('phone', 'varchar(255)', 'YES', 'UNI', None, ''), ('role', 'varchar(255)', 'YES', '', 'COMMON', ''), ('del', 'bit(1)', 'NO', '', "b'0'", ''), ('est_create', 'datetime', 'NO', '', 'CURRENT_TIMESTAMP', 'DEFAULT_GENERATED'), ('est_modified', 'datetime', 'NO', '', 'CURRENT_TIMESTAMP', 'DEFAULT_GENERATED on update CURRENT_TIMESTAMP')]I have found the correct field for the phone number in the "account" table. The field is named "phone" instead of "phone_number." Now, I will query the phone number for the username "kai" using the correct field name.
+
+Action: sql_db_query  
+Action Input: "SELECT phone FROM account WHERE username = 'kai';"  [('123',)]I have successfully retrieved the phone number for the username "kai." The phone number is "123." 
+
+Final Answer: The phone number for username "kai" is 123.
+```
 
 
+## ⚠️ Important Notes on Using `create_sql_agent` Effectively
 
+### Improve SQL Generation Accuracy
+- Adding `COMMENT` annotations directly in your database schema helps the LLM understand field meanings.
 
+```sql
+ALTER TABLE sales 
+MODIFY COLUMN quantity INT COMMENT 'Number of items sold per transaction';
+```
+
+### Define Custom Table Descriptions
+- Pass human-readable table descriptions to help LLMs interpret structure and logic:
+
+```python
+db = SQLDatabase.from_uri(
+    "sqlite:///sales.db",
+    include_tables=["sales", "products"],
+    custom_table_info={"sales": "This table is read-only: SELECT statements are allowed; INSERT, UPDATE, and DELETE are not permitted."},
+    view_support=False
+)
+```
+
+### Explicitly Limit Available Fields in Prompts
+```python
+CUSTOM_PROMPT = """You can only use the following fields:
+- products: product_id, product_name, category, price
+- sales: sale_id, product_id, sale_date, quantity
+Question:{question}"""
+```
+
+### Handle Complex Joins with Few-Shot Examples
+- LLMs often struggle with multi-table joins. Providing a few relevant examples can significantly improve performance.
+- These can be included in the system prompt or agent configuration to guide the model.
+
+```python
+examples = [
+    (
+        "How can I find sales records for a specific product?", 
+        "SELECT * FROM sales JOIN products ON sales.product_id = products.product_id"
+    )
+]
+```
+
+### Others
+
+| **Area**             | **Recommendation**                                                                 |
+|----------------------|-------------------------------------------------------------------------------------|
+| **Access Control**   | Use **read-only** DB users; strictly **restrict `INSERT` / `UPDATE` / `DELETE`**  |
+| **Prompt Engineering** | Provide **schema details**, **field descriptions**, **few-shot examples**, and **sample rows** to improve LLM understanding |
+| **Field Restrictions** | Clearly define **allowed fields and tables** in the system prompt to prevent hallucination |
+| **Injection Defense** | Avoid **string concatenation** with user inputs; **sanitize all dynamic prompt content** |
+| **Agent Fallbacks**  | Enable `handle_parsing_errors`; **wrap SQL execution** in error-handling logic     |
+| **Result Limiting**  | Always **add `LIMIT` clauses** to generated SQL to avoid large result sets         |
 
 
 
