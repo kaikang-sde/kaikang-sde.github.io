@@ -4,6 +4,7 @@ date: 2025-03-28
 categories: [AI, LangChain]
 tags: [AI, LLMs, Prompt, OpenAI]
 author: kai
+permalink: /posts/ai/langchain/langchain-architure-and-llm-io-interation-pipeline
 ---
 
 # 🚀 LangChain Architecture and LLM I/O Interaction Pipeline

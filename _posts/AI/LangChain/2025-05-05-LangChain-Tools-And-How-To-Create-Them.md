@@ -4,6 +4,7 @@ date: 2025-05-05
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent, Tools]
 author: kai
+permalink: /posts/ai/langchain/langchain-tools-and-how-to-create-them/
 ---
 
 # 🚀 LangChain Tools and How to Create Them

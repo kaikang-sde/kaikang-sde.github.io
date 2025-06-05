@@ -4,6 +4,7 @@ date: 2025-03-31
 categories: [Backend, Python]
 tags: [Python, OOP, Object-Oriented Programming]
 author: kai
+permalink: /posts/backend/python/python-oop/
 ---
 
 # 🚀 Python Object-Oriented Programming (OOP)

@@ -4,6 +4,7 @@ date: 2025-05-10
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, MTU, MSS]
 author: kai
+permalink: /posts/architecture/computer-networking/mtu-and-mss/
 ---
 
 # 🧠 MTU and MSS

@@ -4,6 +4,7 @@ date: 2025-03-27
 categories: [Backend, Python]
 tags: [Python, Functions]
 author: kai
+permalink: /posts/backend/python/python-functions/
 ---
 
 # 🚀 Python Functions

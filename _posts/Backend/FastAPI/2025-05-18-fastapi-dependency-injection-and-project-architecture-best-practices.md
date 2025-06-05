@@ -4,6 +4,7 @@ date: 2025-05-18
 categories: [Backend, FastAPI]
 tags: [FastAPI, Dependency-injection, Architecture]
 author: kai
+permalink: /posts/backend/fastapi/fastapi-dependency-injection-and-project-architecture-best-practices/
 ---
 
 # 🚀 FastAPI Dependency Injection & Project Architecture Best Practices

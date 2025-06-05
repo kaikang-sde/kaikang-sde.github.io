@@ -1,12 +1,13 @@
 ---
-title: Python Sets and Common Methods
+title: Python Sets and Common Operations
 date: 2025-03-24
 categories: [Backend, Python]
 tags: [Python, Data Structures, Set]
 author: kai
+permalink: /posts/backend/python/python-sets-and-common-operations/
 ---
 
-# 🚀 Python Sets (set) and Common Methods
+# 🚀 Python Sets (set) and Common Operations
 A **set** is an **unordered collection of unique elements** in Python. Sets are useful for **membership testing**(checking whether an element exists in a collection), **removing duplicates**, and performing **mathematical set operations** like union, intersection, and difference.
 
 - **Uniqueness:** Sets automatically remove duplicate values.

@@ -4,6 +4,7 @@ date: 2025-05-14
 categories: [Backend, FastAPI]
 tags: [FastAPI, Python, Web Development, Async, API Design, HTTP]
 author: kai
+permalink: /posts/backend/fastapi/fastapi-a-modern-web-framework/
 ---
 
 # 🚀 FastAPI: A Modern Web Framework

@@ -3,8 +3,8 @@ title: Python Strings and Common Operations
 date: 2025-03-19
 categories: [Backend, Python, String]
 tags: [Python, Basics, Formatting, Data Types, Import]
-permalink: /python-strings-and-common-operations/
 author: kai
+permalink: /posts/backend/python/python-strings-and-common-operations/
 ---
 
 # 🚀 Python Strings and Common Operations
@@ -139,7 +139,7 @@ Reason: strings are **immutable**, meaning that any modification to a string cre
 
 ### string formatting
 
-[String Formatting in Python]({{ site.baseurl }}/python-basics-quick-reference-guide/#%EF%B8%8F-python-output)
+[String Formatting in Python]({{ site.baseurl }}/posts/backend/python/python-basics-quick-reference-guide/#%EF%B8%8F-python-output)
 
 <br>
 

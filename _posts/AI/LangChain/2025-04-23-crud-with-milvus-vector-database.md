@@ -4,6 +4,7 @@ date: 2025-04-23
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, CRUD]
 author: kai
+permalink: /posts/ai/langchain/crud-with-milvus-vector-database/
 ---
 
 # 🚀 CRUD with Milvus Vector Database
@@ -39,7 +40,7 @@ Milvus is a purpose-built vector database designed for high-performance similari
 **Quick Review:**
 
 [Connect to Milvus, Create, Use and Drop Databases
-]({{ site.baseurl }}/Milvus-Deployment-Architecture-And-Docker-Setup/#-python--milvus-vector-database---practical-integration-case-study)
+]({{ site.baseurl }}/posts/ai/langchain/milvus-deployment-architecture-and-docker-setup/#-python--milvus-vector-database---practical-integration-case-study)
 
 
 ```python

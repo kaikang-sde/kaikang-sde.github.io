@@ -4,8 +4,8 @@ date: 2025-04-12
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Vector]
 author: kai
+permalink: /posts/ai/langchain/vectors-multi-dimensional-vectors-and-tensors/
 ---
-
 
 # 🚀 Vectors, Multi-Dimensional Vectors, and Tensors 
 The **core data structures** is essential for working in AI, machine learning, and data science.

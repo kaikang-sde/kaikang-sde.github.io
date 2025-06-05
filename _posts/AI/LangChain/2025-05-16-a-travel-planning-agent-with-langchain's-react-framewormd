@@ -4,11 +4,12 @@ date: 2025-05-16
 categories: [AI, LangChain]
 tags: [LangChain, LLM, AI Agent, ReAct]
 author: kai
+permalink: /posts/ai/langchain/a-travel-planning-agent-with-langchain's-react-framework/
 ---
 
 # 🚀 ReAct Agent for Travel Planning with LangChain
 
-Link: [CoT and ReAct in LLM Agents]({{ site.baseurl }}/CoT-And-ReAct-In-LLM-Agents/)
+Link: [CoT and ReAct in LLM Agents]({{ site.baseurl }}/posts/ai/langchain/cot-and-react-in-llm-agents/)
 
 **ReAct** stands for **Reasoning + Acting**. It is a hybrid intelligent agent framework that allows Large Language Models (LLMs) to:
 

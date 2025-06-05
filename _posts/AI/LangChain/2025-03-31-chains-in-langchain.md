@@ -1,9 +1,10 @@
 ---
-title: Understanding Chains in LangChain
+title: Chains in LangChain
 date: 2025-03-31
 categories: [AI, LangChain]
 tags: [LangChain, Chains, LLMChain, LCEL, Workflow, Prompt Engineering]
 author: kai
+permalink: /posts/ai/langchain/chains-in-langchain/
 ---
 
 # 🚀 Understanding Chains in LangChain

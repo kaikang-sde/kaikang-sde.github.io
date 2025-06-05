@@ -4,6 +4,7 @@ date: 2025-04-26
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, RAG]
 author: kai
+permalink: /posts/ai/langchain/langchain-integration-with-milvus-case-study/
 ---
 
 # 🚀 LangChain Integration with Milvus - Case Study

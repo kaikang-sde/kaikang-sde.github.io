@@ -4,6 +4,7 @@ date: 2025-03-11
 categories: [AI, Fundamentals]
 tags: [AI, LLMs, Thought-Action-Observation, ReAct, Internal Reasoning]
 author: kai
+permalink: /posts/ai/fundamentals/ai-decision-making-tao-cycle-internal-reasoning-and-the-react-approach/
 ---
 
 # 🚀 Mastering AI Decision-Making: TAO Cycle, Internal Reasoning, and the ReAct Approach   

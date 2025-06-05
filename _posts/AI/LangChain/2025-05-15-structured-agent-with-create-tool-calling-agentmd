@@ -4,6 +4,7 @@ date: 2025-05-15
 categories: [AI, LangChain]
 tags: [LangChain, LLM, AI Agent, create_tool_calling_agent]
 author: kai
+permalink: /posts/ai/langchain/structured-agent-with-create-tool-calling-agent/
 ---
 
 # 🚀 Structured Agent with create_tool_calling_agent

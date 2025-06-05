@@ -4,6 +4,7 @@ date: 2025-04-06
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Hallucination]
 author: kai
+permalink: /posts/ai/langchain/hallucination-in-llm/
 ---
 
 

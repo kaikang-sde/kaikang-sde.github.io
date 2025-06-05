@@ -4,6 +4,7 @@ date: 2025-05-22
 categories: [AI, LangChain]
 tags: [LangChain, RunnableWithMessageHistory, Multi-Session, Multi-User]
 author: kai
+permalink: /posts/ai/langchain/isolating-memory-in-llms-with runnablewithmessagehistory/
 ---
 
 # 🚀 Isolating Memory in LLMs with RunnableWithMessageHistory

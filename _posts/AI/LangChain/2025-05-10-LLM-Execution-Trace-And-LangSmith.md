@@ -4,6 +4,7 @@ date: 2025-05-10
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent, LangSmith, Debugging]
 author: kai
+permalink: /posts/ai/langchain/llm-execution-trace-and-langsmith/
 ---
 
 # 🚀 LLM Execution Trace & LangSmith: Debugging, Testing, and Monitoring Intelligent Agents

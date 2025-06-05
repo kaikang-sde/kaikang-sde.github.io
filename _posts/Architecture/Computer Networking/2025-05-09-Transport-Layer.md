@@ -4,6 +4,7 @@ date: 2025-05-09
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, Transport Layer, TCP, UDP]
 author: kai
+permalink: /posts/architecture/computer-networking/transport-layer/
 ---
 
 # 🧩 Transport Layer

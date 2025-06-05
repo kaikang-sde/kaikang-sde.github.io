@@ -4,6 +4,7 @@ date: 2025-05-24
 categories: [AI, LangChain]
 tags: [LangChain, LLM, StreamingResponse, AI Assistant]
 author: kai
+permalink: /posts/ai/langchain/fastai-llm-building-a-streaming-ai-powered-qa-assistant/
 ---
 
 # 🚀 FastAPI + LLM: Building a Streaming AI-Powered Q&A Assistant

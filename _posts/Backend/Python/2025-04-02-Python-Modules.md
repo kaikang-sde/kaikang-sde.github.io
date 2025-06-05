@@ -4,6 +4,7 @@ date: 2025-04-02
 categories: [Backend, Python]
 tags: [Python, Modules, pip, json, os, random, math, sys]
 author: kai
+permalink: /posts/backend/python/python-modules/
 ---
 
 # 🚀 Python Modules

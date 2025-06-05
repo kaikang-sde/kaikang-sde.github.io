@@ -4,6 +4,7 @@ date: 2025-06-04
 categories: [AI, LangChain]
 tags: [LangChain, LLM, MySQL, SQL Agent, Natural-Language-Query]
 author: kai
+permalink: /posts/ai/langchain/llm-accessing-mysql-sql-agent/
 ---
 
 # 🚀 LLM Accessing MySQL - SQL Agent with LangChain

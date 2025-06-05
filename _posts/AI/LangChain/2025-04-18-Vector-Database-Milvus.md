@@ -4,6 +4,7 @@ date: 2025-04-18
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Vector Database, Milvus]
 author: kai
+permalink: /posts/ai/langchain/vector-database-milvus/
 ---
 
 # 🚀 Milvus Vector Database

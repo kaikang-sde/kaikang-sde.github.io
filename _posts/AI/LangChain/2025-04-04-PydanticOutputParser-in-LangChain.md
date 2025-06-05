@@ -4,6 +4,7 @@ date: 2025-04-04
 categories: [AI, LangChain]
 tags: [LangChain, Pydantic, OutputParser, LLM]
 author: kai
+permalink: /posts/ai/langchain/pydanticoutputparser-in-langchain/
 ---
 
 

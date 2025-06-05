@@ -4,6 +4,7 @@ date: 2025-05-19
 categories: [AI, LangChain]
 tags: [LangChain, LLM Memory, AI Agent, ChatHistory]
 author: kai
+permalink: /posts/ai/langchain/basechatmemory-in-langchain-customizable-memory-for-llm-applications/
 ---
 
 # 🚀 BaseChatMemory in LangChain: Customizable Memory for LLM Applications

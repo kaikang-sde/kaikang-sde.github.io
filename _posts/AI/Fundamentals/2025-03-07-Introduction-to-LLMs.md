@@ -4,6 +4,7 @@ date: 2025-03-07
 categories: [AI, Fundamentals]
 tags: [AI, LLMs]
 author: kai
+permalink: /posts/ai/fundamentals/introduction-to-llms/
 ---
 
 # 🚀 How AI Learns, Predicts, and Generates Language

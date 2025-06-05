@@ -4,6 +4,7 @@ date: 2025-04-01
 categories: [AI, LangChain]
 tags: [LangChain, Streaming, LLM, LCEL, ChatModel]
 author: kai
+permalink: /posts/ai/langchain/llm-streaming-output-with-langchain/
 ---
 
 # 🚀 LLM Streaming Output with LangChain: Real-Time Responses in Action

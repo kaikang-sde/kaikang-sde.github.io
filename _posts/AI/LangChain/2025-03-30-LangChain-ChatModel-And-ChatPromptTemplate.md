@@ -4,6 +4,7 @@ date: 2025-03-30
 categories: [AI, LangChain]
 tags: [LangChain, ChatModel, Prompt Engineering, Token Counting, ChatPromptTemplate]
 author: kai
+permalink: /posts/ai/langchain/langchain-chatmodel-and-chatprompttemplate/
 ---
 
 # 🚀 LangChain ChatModel: Conversational LLMs Designed for Multi-Turn Dialogues

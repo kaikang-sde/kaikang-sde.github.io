@@ -3,8 +3,8 @@ title: Summation, Dot Product, and Cosine Similarity
 date: 2025-04-13
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Vector, Summation, Dot Product, Cosine Similarity]
-permalink: /summation-dot-product-and-cosine-similarity/
 author: kai
+permalink: /posts/ai/langchain/summation-dot-product-and-cosine-similarity/
 ---
 
 # 🚀 Summation, Dot Product, and Cosine Similarity

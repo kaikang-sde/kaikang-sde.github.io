@@ -4,6 +4,7 @@ date: 2025-05-20
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, TCP, Reliability, FlowControl, CongestionControl, Retransmission, ACK]
 author: kai
+permalink: /posts/architecture/computer-networking/tcp-reliability/
 ---
 
 # 🛜 TCP Reliability: ACK, Flow Control, Congestion Control, and Retransmission"

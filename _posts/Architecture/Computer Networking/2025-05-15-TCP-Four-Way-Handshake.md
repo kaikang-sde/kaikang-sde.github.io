@@ -4,6 +4,7 @@ date: 2025-05-15
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, TCP, Four-Way Handshake]
 author: kai
+permalink: /posts/architecture/computer-networking/tcp-four-way-handshake/
 ---
 
 # 🔚 TCP: Four-Way Handshake

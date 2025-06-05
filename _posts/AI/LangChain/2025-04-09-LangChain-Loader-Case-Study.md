@@ -4,6 +4,7 @@ date: 2025-04-09
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Loader, TextLoader, CSVLoader, JSONLoader, PyPDFLoader, Docx2txtLoader, WebBaseLoader]
 author: kai
+permalink: /posts/ai/langchain/langchain-loader-case-study/
 ---
 
 

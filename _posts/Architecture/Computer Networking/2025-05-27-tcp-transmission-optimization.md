@@ -4,6 +4,7 @@ date: 2025-05-27
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, TCP, Nagle, Delayed-ACK, Kafka Producer Optimization]
 author: kai
+permalink: /posts/architecture/computer-networking/tcp-transmission-optimization/
 ---
 
 # 🚀 TCP Transmission Optimization: Nagle Algorithm and Delayed ACK

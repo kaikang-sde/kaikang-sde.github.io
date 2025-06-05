@@ -4,6 +4,7 @@ date: 2025-05-15
 categories: [Backend, FastAPI]
 tags: [FastAPI, AsyncIO, Python, Backend Development]
 author: kai
+permalink: /posts/backend/fastapi/sync-vs-async-in-fastapi/
 ---
 
 # 🚀 Sync vs Async in FastAPI

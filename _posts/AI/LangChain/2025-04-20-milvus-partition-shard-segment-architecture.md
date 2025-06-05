@@ -4,6 +4,7 @@ date: 2025-04-20
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Partition, Shard, Segment]
 author: kai
+permalink: /posts/ai/langchain/milvus-partition-shard-segment-architecture/
 ---
 
 # 🚀 Milvus Partition-Shard-Segment Architecture

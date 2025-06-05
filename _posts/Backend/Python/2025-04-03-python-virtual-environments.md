@@ -4,6 +4,7 @@ date: 2025-04-03
 categories: [Backend, Python]
 tags: [Python, virtualenv, venv, environment, pip, isolation]
 author: kai
+permalink: /posts/backend/python/python-virtual-environments/
 ---
 
 # 🚀 Python Virtual Environment (`venv`)

@@ -1,12 +1,13 @@
 ---
-title: Python Dictionary and Common Methods
+title: Python Dictionary and Common Operations
 date: 2025-03-22
 categories: [Backend, Python]
 tags: [Python, Data Structures, Dictionary]
 author: kai
+permalink: /posts/backend/python/python-dictionary-and-common-operations/
 ---
 
-# 🚀 Python Dictionary (dict) and Common Methods
+# 🚀 Python Dictionary (dict) and Common Operations
 A **dictionary** is a **collection of key-value pairs**, where **keys are unique and immutable** (e.g., strings, numbers, tuples), and **values can be of any data type**.
 
 - **Unordered** (Before Python 3.7) → Dictionary items were stored without a guaranteed order.

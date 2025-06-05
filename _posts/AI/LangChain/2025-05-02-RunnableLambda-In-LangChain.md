@@ -4,6 +4,7 @@ date: 2025-05-02
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, RunnableLambda]
 author: kai
+permalink: /posts/ai/langchain/runnablelambda-in-langchain/
 ---
 
 # 🚀 RunnableLambda in LangChain

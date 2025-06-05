@@ -4,6 +4,7 @@ date: 2025-03-08
 categories: [AI, Fundamentals]
 tags: [AI, LLMs, Instruction-Tuned, Inference]
 author: kai
+permalink: /posts/ai/fundamentals/llm-classification-instruction-vs-inference-models/
 ---
 
 # 🚀 Understanding LLM Classification: Instruction-Tuned vs. Inference Models  

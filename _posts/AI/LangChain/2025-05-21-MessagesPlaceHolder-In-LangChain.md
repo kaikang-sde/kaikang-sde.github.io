@@ -4,6 +4,7 @@ date: 2025-05-21
 categories: [AI, LangChain]
 tags: [LangChain, MessagesPlaceholder, ChatPromptTemplate, LLM, Memory]
 author: kai
+permalink: /posts/ai/langchain/messagesplaceholder-in-langchain/
 ---
 
 # 🚀 MessagesPlaceholder in LangChain

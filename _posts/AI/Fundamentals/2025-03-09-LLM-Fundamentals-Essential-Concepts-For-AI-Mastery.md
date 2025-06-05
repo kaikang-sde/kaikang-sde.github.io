@@ -4,6 +4,7 @@ date: 2025-03-09
 categories: [AI, Fundamentals]
 tags: [AI, LLMs, Token, Transformer, Self-Attention, Loss Function, Prompt, Temperature, Pre-Training, Fine-Tuning, RLHF, Distillation, Parameters]
 author: kai
+permalink: /posts/ai/fundamentals/llm-fundamentals-essential-concepts-for-ai-mastery/
 ---
 
 # 🚀 LLM Fundamentals: Essential Concepts for AI Mastery

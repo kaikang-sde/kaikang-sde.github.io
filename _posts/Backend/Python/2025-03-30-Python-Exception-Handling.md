@@ -4,6 +4,7 @@ date: 2025-03-30
 categories: [Backend, Python]
 tags: [Python, exception, try-except]
 author: kai
+permalink: /posts/backend/python/python-exception-handling/
 ---
 
 # 🚀 Python Exception Handling

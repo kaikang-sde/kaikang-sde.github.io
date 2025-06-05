@@ -4,6 +4,7 @@ date: 2025-03-21
 categories: [Backend, Python]
 tags: [Python, Data Structures, List]
 author: kai
+permalink: /posts/backend/python/python-list-and-common-operations/
 ---
 
 # 🚀 Python List and Common Operations

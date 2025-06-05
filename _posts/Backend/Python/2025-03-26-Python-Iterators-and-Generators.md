@@ -4,6 +4,7 @@ date: 2025-03-26
 categories: [Backend, Python]
 tags: [Python, Iterators, Generators]
 author: kai
+permalink: /posts/backend/python/python-iterators-and-generators/
 ---
 
 # 🚀 Python Iterators and Generators

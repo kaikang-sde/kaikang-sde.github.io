@@ -4,6 +4,7 @@ date: 2025-04-22
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Indexing]
 author: kai
+permalink: /posts/ai/langchain/indexing-in-milvus/
 ---
 
 # 🚀 Indexing in Milvus - Best Practices and Strategy Guide

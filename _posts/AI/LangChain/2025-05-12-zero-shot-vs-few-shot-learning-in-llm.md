@@ -4,6 +4,7 @@ date: 2025-05-12
 categories: [AI, LangChain]
 tags: [LangChain, Zero-Shot, Few-Shot, Prompt Engineering, LLM]
 author: kai
+permalink: /posts/ai/langchain/zero-shot-vs-few-shot-learning-in-llm/
 ---
 
 # 🚀 Zero-Shot vs Few-Shot Learning in Large Language Models
