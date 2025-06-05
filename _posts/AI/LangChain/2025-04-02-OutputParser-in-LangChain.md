@@ -1,9 +1,10 @@
 ---
-title: Understanding OutputParser in LangChain
+title: OutputParser in LangChain
 date: 2025-04-02
 categories: [AI, LangChain]
 tags: [LangChain, OutputParser, LLM, Prompt Engineering, Parsing]
 author: kai
+permalink: /posts/ai/langchain/outputparser-in-langchain/
 ---
 
 # 🚀 LLM Streaming Output with LangChain: Real-Time Responses in Action

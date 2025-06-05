@@ -4,6 +4,7 @@ date: 2025-05-01
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, RunnableParallel]
 author: kai
+permalink: /posts/ai/langchain/runnableparallel-in-langchain/
 ---
 
 # 🚀 RunnableParallel in LangChain

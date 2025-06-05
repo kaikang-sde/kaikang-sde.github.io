@@ -4,6 +4,7 @@ date: 2025-03-20
 categories: [Backend, Python]
 tags: [Python, Built-in Functions]
 author: kai
+permalink: /posts/backend/python/python-common-built-in-functions/
 ---
 
 # 🚀 Python Common Built-in Functions

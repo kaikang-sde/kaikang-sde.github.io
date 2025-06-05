@@ -4,6 +4,7 @@ date: 2025-04-05
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Output Parsing]
 author: kai
+permalink: /posts/ai/langchain/outputfixingparser-auto-recovery-for-invalid-llm-output/
 ---
 
 

@@ -4,6 +4,7 @@ date: 2025-04-11
 categories: [AI, LangChain]
 tags: [LangChain, LLM, RAG, Splitting, Transformation, CharacterTextSplitter, RecursiveCharacterTextSplitter]
 author: kai
+permalink: /posts/ai/langchain/best-practices-and-pitfalls-in-langchain-text-splitting/
 ---
 
 

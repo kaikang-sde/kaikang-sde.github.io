@@ -4,6 +4,7 @@ date: 2025-03-28
 categories: [Backend, Python]
 tags: [Python, lambda, anonymous-function]
 author: kai
+permalink: /posts/backend/python/python-lambda-functions/
 ---
 
 # 🚀 Python Lambda (Anonymous) Functions

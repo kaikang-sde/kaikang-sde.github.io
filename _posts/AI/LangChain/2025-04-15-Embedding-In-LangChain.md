@@ -4,6 +4,7 @@ date: 2025-04-15
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Vector, Text Embedding]
 author: kai
+permalink: /posts/ai/langchain/embedding-in-langchain/
 ---
 
 # 🚀 Embedding in LangChain: A Universal Interface for Vector Representations
@@ -150,7 +151,7 @@ Internal Database Storage (e.g., FAISS, Qdrant)
 
 > ✅ No data ever leaves the organization’s firewall. This ensures compliance with legal regulations and builds trust with users.
 
-[RAG Data Pipeline Overview]({{ site.baseurl }}/LangChain/RAG-System-Pipeline-Document-Loading/#-rag-data-pipeline-overview)
+[RAG Data Pipeline Overview]({{ site.baseurl }}/posts/ai/langchain/rag-system-pipeline-document-loading/#-rag-data-pipeline-overview)
 
 ### Local Deployment: Running Embedding Models with Ollama
 Deploying embedding models locally can be fast and developer-friendly using [Ollama](https://ollama.com/search?c=embed), a tool for managing and serving LLMs locally.

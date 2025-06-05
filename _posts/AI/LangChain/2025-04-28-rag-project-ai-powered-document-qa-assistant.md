@@ -4,6 +4,7 @@ date: 2025-04-28
 categories: [AI, LangChain]
 tags: [LangChain, RAG, Milvus, LLM]
 author: kai
+permalink: /posts/ai/langchain/rag-project-ai-powered-document-qa-assistant/
 ---
 
 # 🚀 RAG project - AI-powered Document Q&A Assistant

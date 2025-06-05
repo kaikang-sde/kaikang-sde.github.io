@@ -4,6 +4,7 @@ date: 2025-04-29
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, ICEL, Async-processing]
 author: kai
+permalink: /posts/ai/langchain/langchain-runnable-interface/
 ---
 
 # 🚀 LangChain - Runnable Interface

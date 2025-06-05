@@ -3,15 +3,15 @@ title: LangChain Retrievers
 date: 2025-04-27
 categories: [AI, LangChain]
 tags: [LangChain, Retriever, Vector Store, RAG]
-permalink: /LangChain-Retrievers/
 author: kai
+permalink: /posts/ai/langchain/langchain-retrievers/
 ---
 
 # 🚀 LangChain Retrievers
 
 A **Retriever** is a standardized component in modern LLM pipelines that enables models to access external knowledge beyond their training data. It abstracts the retrieval process and provides a clean, consistent interface regardless of the underlying data source.
 
-[RAG Data Pipeline Overview]({{ site.baseurl }}/LangChain/RAG-System-Pipeline-Document-Loading/#-rag-data-pipeline-overview)
+[RAG Data Pipeline Overview]({{ site.baseurl }}/posts/ai/langchain/rag-system-pipeline-document-loading/#-rag-data-pipeline-overview)
 
 
 ## 🔌 Unified Interface
@@ -92,7 +92,7 @@ This allows you to create powerful **chain-based** applications where retrieval,
 
 ## 📦 Common Retriever Types
 
-[Multiple Retriever Implementations]({{ site.baseurl }}/LangChain-Retrievers/#-multiple-retriever-implementations)
+[Multiple Retriever Implementations]({{ site.baseurl }}/posts/ai/langchain/langchain-retrievers/#-multiple-retriever-implementations)
 
 
 ### VectorStoreRetriever Example

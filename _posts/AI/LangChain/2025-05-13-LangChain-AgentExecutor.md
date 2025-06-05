@@ -4,6 +4,7 @@ date: 2025-05-13
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent, AgentExecutor]
 author: kai
+permalink: /posts/ai/langchain/langchain-agentexecutor/
 ---
 
 # 🚀 LangChain AgentExecutor: A Robust Execution Engine for Multi-Step AI Agents

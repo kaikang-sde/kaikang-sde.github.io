@@ -4,6 +4,7 @@ date: 2025-04-16
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Embedding Caching, CacheBackedEmbeddings]
 author: kai
+permalink: /posts/ai/langchain/optimizing-embedding-model-performance-in-rag-systems/
 ---
 
 # 🚀 Optimizing Embedding Model Performance in RAG Systems

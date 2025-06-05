@@ -4,6 +4,7 @@ date: 2025-05-23
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Memory, AI Agents, Vector Database]
 author: kai
+permalink: /posts/ai/langchain/long-term-memory-in-llm-applications/
 ---
 
 # 🚀 Long-Term Memory in LLM Applications

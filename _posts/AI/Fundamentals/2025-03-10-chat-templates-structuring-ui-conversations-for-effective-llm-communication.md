@@ -4,6 +4,7 @@ date: 2025-03-10
 categories: [AI, Fundamentals]
 tags: [AI, LLMs, Templates]
 author: kai
+permalink: /posts/ai/fundamentals/chat-templates-structuring-ui-conversations-for-effective-llm-communication/
 ---
 
 # 🚀 Chat Templates - Structuring UI Conversations for Effective LLM Communication

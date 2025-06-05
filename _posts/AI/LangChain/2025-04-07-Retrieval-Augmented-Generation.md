@@ -4,6 +4,7 @@ date: 2025-04-07
 categories: [AI, LangChain]
 tags: [LangChain, LLM, RAG, Retrieval-Augmented Generation]
 author: kai
+permalink: /posts/ai/langchain/retrieval-augmented-generation/
 ---
 
 

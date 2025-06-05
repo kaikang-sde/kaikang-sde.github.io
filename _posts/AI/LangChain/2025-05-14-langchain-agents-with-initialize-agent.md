@@ -4,6 +4,7 @@ date: 2025-05-14
 categories: [AI, LangChain]
 tags: [LangChain, LLM, ReAct, AgentExecutor, Tool Calling]
 author: kai
+permalink: /posts/ai/langchain/langchain-agents-with-initialize-agent/
 ---
 
 # 🚀 LangChain Agents with `initialize_agent`

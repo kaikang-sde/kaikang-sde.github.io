@@ -4,6 +4,7 @@ date: 2025-04-04
 categories: [Backend, Python]
 tags: [Python, typing, type-hints, static-checking]
 author: kai
+permalink: /posts/backend/python/python-typing-module/
 ---
 
 # 🚀 Python Typing Module

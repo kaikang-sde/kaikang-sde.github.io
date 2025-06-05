@@ -4,6 +4,7 @@ date: 2025-05-04
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Agent]
 author: kai
+permalink: /posts/ai/langchain/llm-agents/
 ---
 
 # 🚀 Large Language Model (LLM) Agents

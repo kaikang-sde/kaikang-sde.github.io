@@ -4,6 +4,7 @@ date: 2025-03-29
 categories: [AI, Prompt Engineering]
 tags: [LLM, Prompt Engineering, AI, NLP]
 author: kai
+permalink: /posts/ai/prompt/prompt-engineering/
 ---
 
 # 🚀 Prompt Engineering

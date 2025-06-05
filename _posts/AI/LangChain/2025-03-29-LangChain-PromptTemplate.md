@@ -4,6 +4,7 @@ date: 2025-03-29
 categories: [AI, LangChain]
 tags: [LangChain, PromptTemplate, LLM]
 author: kai
+permalink: /posts/ai/langchain/langchain-prompttemplate/
 ---
 
 # 🚀 LangChain PromptTemplate: Dynamic Prompt Design in Action

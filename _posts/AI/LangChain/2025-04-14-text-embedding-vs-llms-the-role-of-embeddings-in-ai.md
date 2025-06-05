@@ -4,6 +4,7 @@ date: 2025-04-14
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Vector, Text Embedding]
 author: kai
+permalink: /posts/ai/langchain/text-embedding-vs-llms-the-role-of-embeddings-in-ai/
 ---
 
 # 🚀 Text Embedding vs. LLMs: Understanding the Role of Embeddings in AI

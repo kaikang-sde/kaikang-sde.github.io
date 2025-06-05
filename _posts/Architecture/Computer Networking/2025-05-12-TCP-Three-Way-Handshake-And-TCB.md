@@ -4,6 +4,7 @@ date: 2025-05-12
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, TCP, Transport Layer, Three-Way Handshake]
 author: kai
+permalink: /posts/architecture/computer-networking/tcp-three-way-handshake-and-tcb/
 ---
 
 # 🔍 TCP Three-Way Handshake

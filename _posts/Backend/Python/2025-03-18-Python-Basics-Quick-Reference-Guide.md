@@ -3,8 +3,8 @@ title: Python Basics - Quick Reference Guide
 date: 2025-03-18
 categories: [Backend, Python]
 tags: [Python, Basics, Formatting, Data Types, Import]
-permalink: /python-basics-quick-reference-guide/
 author: kai
+permalink: /posts/backend/python/python-basics-quick-reference-guide/
 ---
 
 # 🚀 Python Basics: Quick Reference Guide

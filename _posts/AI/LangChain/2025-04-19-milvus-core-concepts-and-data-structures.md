@@ -4,6 +4,7 @@ date: 2025-04-19
 categories: [AI, LangChain]
 tags: [LangChain, Vector Database, Milvus, Collection, Entity, Field, Similarity]
 author: kai
+permalink: /posts/ai/langchain/milvus-core-concepts-and-data-structures/
 ---
 
 # 🚀 Milvus Core Concepts and Data Structures
@@ -195,7 +196,7 @@ Great for scenarios where vector magnitude matters (e.g., image or sensor data).
 
 
 ### 2. Inner Product (Dot Product or IP)
-[Inner Product]({{ site.baseurl }}/summation-dot-product-and-cosine-similarity/#-dot-product)
+[Inner Product]({{ site.baseurl }}/posts/ai/langchain/summation-dot-product-and-cosine-similarity/#-dot-product)
 
 
 **Formula:**
@@ -217,7 +218,7 @@ Works well with non-normalized embeddings, commonly used in recommender systems.
 
 
 ### 3. Cosine Similarity
-[Cosine Similarity]({{ site.baseurl }}/summation-dot-product-and-cosine-similarity/#-cosine-similarity)
+[Cosine Similarity]({{ site.baseurl }}/posts/ai/langchain/summation-dot-product-and-cosine-similarity/#-cosine-similarity)
 
 **Formula:**
 

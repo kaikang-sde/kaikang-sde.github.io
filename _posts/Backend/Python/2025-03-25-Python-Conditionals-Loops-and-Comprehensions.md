@@ -4,6 +4,7 @@ date: 2025-03-25
 categories: [Backend, Python]
 tags: [Python, Loops, Conditionals, Comprehensions]
 author: kai
+permalink: /posts/backend/python/python-conditionals-loops-and-comprehensions/
 ---
 
 # 🚀 Python Conditionals, Loops, and Comprehensions

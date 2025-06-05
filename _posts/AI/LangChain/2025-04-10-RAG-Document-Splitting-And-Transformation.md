@@ -4,6 +4,7 @@ date: 2025-04-10
 categories: [AI, LangChain]
 tags: [LangChain, LLM, RAG, Splitting, Transformation, CharacterTextSplitter, RecursiveCharacterTextSplitter]
 author: kai
+permalink: /posts/ai/langchain/rag-document-splitting-and-transformation/
 ---
 
 
@@ -11,7 +12,7 @@ author: kai
 
 In Retrieval-Augmented Generation (RAG) systems, **transforming raw documents into structured, semantically meaningful chunks is essential**. This process ensures downstream components like **vector databases** and **language models can process and understand content** efficiently.
 
-[RAG Data Pipeline Overview]({{ site.baseurl }}/LangChain/RAG-System-Pipeline-Document-Loading/#-rag-data-pipeline-overview)
+[RAG Data Pipeline Overview]({{ site.baseurl }}/posts/ai/langchain/rag-system-pipeline-document-loading/#-rag-data-pipeline-overview)
 
 
 ## 🚨 Why Do We Need Document Transformers?

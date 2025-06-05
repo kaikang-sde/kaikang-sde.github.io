@@ -4,6 +4,7 @@ date: 2025-05-17
 categories: [Backend, FastAPI]
 tags: [FastAPI, APIRouter, Code Structure, API Versioning, Security]
 author: kai
+permalink: /posts/backend/fastapi/modular-route-management-in-fastapi-using-apirouter/
 ---
 
 # 🚀 Modular Route Management in FastAPI Using APIRouter

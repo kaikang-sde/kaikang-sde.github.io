@@ -1,12 +1,13 @@
 ---
-title: Python Tuples and Common Methods
+title: Python Tuples and Common Operations
 date: 2025-03-23
 categories: [Backend, Python]
 tags: [Python, Data Structures, Tuple]
 author: kai
+permalink: /posts/backend/python/python-tuples-and-common-operations/
 ---
 
-# 🚀 Python Tuples (tuple) and Common Methods
+# 🚀 Python Tuples (tuple) and Common Operations
 A **tuple** is an **immutable sequence type** in Python, meaning its content **cannot be changed once created**. Tuples are commonly used in **read-only or fixed data** scenarios.
 - **Immutability** —> Tuples themselves cannot be changed after creation. However, if a tuple contains mutable elements (like lists), those internal elements can still be modified without changing the overall tuple structure.
 - **Ordered** -> Tuples preserve the order in which elements are added, so you can access elements by their index.

@@ -4,6 +4,7 @@ date: 2025-04-17
 categories: [AI, LangChain]
 tags: [LangChain, LLM, RAG, Embedding, Vector Databases]
 author: kai
+permalink: /posts/ai/langchain/vector-databases/
 ---
 
 # 🚀 Vector Databases 
@@ -11,7 +12,7 @@ A **vector database** is a special kind of database built for storing and queryi
 
 Unlike traditional relational databases, vector databases are designed to support **similarity search** based on **cosine similarity**, **Euclidean distance**, or **dot product**.
 
-[RAG Data Pipeline Overview]({{ site.baseurl }}/LangChain/RAG-System-Pipeline-Document-Loading/#-rag-data-pipeline-overview)
+[RAG Data Pipeline Overview]({{ site.baseurl }}/posts/ai/langchain/rag-system-pipeline-document-loading/#-rag-data-pipeline-overview)
 
 
 ## 🚫 Limitations of Traditional Databases for Vector Storage

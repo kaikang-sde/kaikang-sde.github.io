@@ -4,6 +4,7 @@ date: 2025-05-08
 categories: [AI, LangChain]
 tags: [LangChain, ToolException, Error Handling, AI Agents, Tools]
 author: kai
+permalink: /posts/ai/langchain/handling-tool-errors-with-toolexception/
 ---
 
 # 🚀 Handling Tool Errors with ToolException

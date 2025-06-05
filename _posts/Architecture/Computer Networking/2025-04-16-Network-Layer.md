@@ -4,12 +4,13 @@ date: 2025-04-16
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, Network Layer, Internet Layer, IP, IPv4]
 author: kai
+permalink: /posts/architecture/computer-networking/network-layer/
 ---
 
 # 🌐 Network Layer or Internet Layer
 The **Network Layer** is a fundamental component of modern computer networks, responsible for **routing data packets from one host to another** across interconnected networks.
 
-[Network Layer/Internet Layer]({{ site.baseurl }}/basic-of-computer-networking/#-tcpip-4-layer-model)
+[Network Layer/Internet Layer]({{ site.baseurl }}/posts/architecture/computer-networking/basic-of-computer-networking/#-tcpip-4-layer-model)
 
 - When people say “**Network Layer**”, they usually refer to the same functions as the **Internet Layer** in TCP/IP model.
 - So, they are **functionally equivalent**, just named differently in different models.

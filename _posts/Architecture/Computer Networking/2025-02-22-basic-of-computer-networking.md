@@ -3,8 +3,8 @@ title: OSI & TCP/IP Network Layer Models
 date: 2025-02-22
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, OSI & TCP/IP]
-permalink: /basic-of-computer-networking/
 author: kai
+permalink: /posts/architecture/computer-networking/basic-of-computer-networking/
 ---
 
 # 🌐 OSI & TCP/IP Network Layer Models

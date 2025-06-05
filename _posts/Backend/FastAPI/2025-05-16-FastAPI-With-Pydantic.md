@@ -4,6 +4,7 @@ date: 2025-05-16
 categories: [Backend, FastAPI]
 tags: [FastAPI, Pydantic, Python, API, Data Validation]
 author: kai
+permalink: /posts/backend/fastapi/fastapi-with-pydantic/
 ---
 
 # 🚀 FastAPI with Pydantic
@@ -13,7 +14,7 @@ When building APIs with **FastAPI**, defining **data models** using **Pydantic**
 - Ensuring data integrity
 - Structuring clean API contracts
 
-[Python Model Management with Pydantic]({{ site.baseurl }}/Python-Data-Validation-With-Pydantic)
+[Python Model Management with Pydantic]({{ site.baseurl }}/posts/ai/langchain/python-model-management-with-pydantic/)
 
 
 ## ❓ What Is a Data Model
@@ -101,7 +102,7 @@ async def create_item(item: Item):
 ```
 
 ## 🔒 Password Strength Validation in FastAPI
-[Fields Pydantic]({{ site.baseurl }}/Python-Data-Validation-With-Pydantic/#-field-in-pydantic)
+[Fields Pydantic]({{ site.baseurl }}/posts/ai/langchain/python-model-management-with-pydantic/#-field-in-pydantic)
 
 With FastAPI and Pydantic, we can easily define **custom password validators** using the `@field_validator` decorator in Pydantic v2.
 

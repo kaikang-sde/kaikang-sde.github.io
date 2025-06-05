@@ -4,6 +4,7 @@ date: 2025-05-03
 categories: [AI, LangChain]
 tags: [LangChain, LLM, Runnable, RunnableBranch]
 author: kai
+permalink: /posts/ai/langchain/runnablebranch-in-langchain/
 ---
 
 # 🚀 RunnableBranch in LangChain

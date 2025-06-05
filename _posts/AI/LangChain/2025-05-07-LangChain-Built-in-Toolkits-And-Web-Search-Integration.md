@@ -4,6 +4,7 @@ date: 2025-05-07
 categories: [AI, LangChain]
 tags: [LangChain, Tools, Web Search, AI Agent, LLM]
 author: kai
+permalink: /posts/ai/langchain/langchain-built-in-toolkits-and-web-search-integration/
 ---
 
 # 🚀 LangChain Built-in Toolkits and Web Search Integration

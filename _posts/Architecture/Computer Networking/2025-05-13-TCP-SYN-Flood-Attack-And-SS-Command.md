@@ -4,6 +4,7 @@ date: 2025-05-13
 categories: [Architecture, Computer Networking]
 tags: [Computer Networking, TCP, SYN Flood, Linux, ss command, Cybersecurity]
 author: kai
+permalink: /posts/architecture/computer-networking/tcp-syn-flood-attack-and-ss-command/
 ---
 
 # 🛡️ TCP SYN Flood Attack and ss Command
@@ -261,7 +262,7 @@ This makes queue overflows a **silent bottleneck**, often overlooked during perf
 ## 🛠️ Detecting with the `ss` Command
 - The `ss` (Socket Statistics) command is a powerful networking utility in Linux used to display detailed information about current network connections. It supports various protocols such as **TCP**, **UDP**, and **Unix domain sockets**.
 
-- While similar in function to the [`netstat`]({{ site.baseurl }}/Core-Performance-Metric-In-Computer-Networks-And-Common-Commands/#-netstat) command, `ss` provides **faster output**, **richer information**, and better support for modern Linux kernels.
+- While similar in function to the [`netstat`]({{ site.baseurl }}/posts/architecture/computer-networking/core-performance-metric-in-computer-networks-and-common-commands/#-netstat) command, `ss` provides **faster output**, **richer information**, and better support for modern Linux kernels.
 
 
 ### 📦 Basic Usage
