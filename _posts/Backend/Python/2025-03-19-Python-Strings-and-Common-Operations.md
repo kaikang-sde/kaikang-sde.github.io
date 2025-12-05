@@ -137,9 +137,6 @@ Reason: strings are **immutable**, meaning that any modification to a string cre
 | `s.center(width, char)` | **Centers text** within a **specified width** using **char** for padding.<br>Will not remove whitespaces.<br>width is the length of the result | `s.center(20, "*")` | `"****** Python ******"` |
 | `s.zfill(width)` | **Left-pads** the string with zeros until it reaches width.<br>Will not remove whitespaces.<br>width is the length of the result| `s.zfill(10)` | `"00 Python "` |
 
-### string formatting
-
-[String Formatting in Python]({{ site.baseurl }}/posts/backend/python/python-basics-quick-reference-guide/#%EF%B8%8F-python-output)
 
 <br>
 
