@@ -68,18 +68,86 @@ def build_linked_list(nums):
 
 ## 📊 Basic Linked List Operations
 
-### 1️⃣ Traversal
-Visit each node from head to tail.
-- Time complexity: O(n)
-
 ```python
-def traverse_linked_list(head):
-    current = head
-    while current is not None: # better than while current:
-        print(current.val)
-        current = current.next
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def get(self, index):
+        cur = self.head
+        for i in range(index):
+            cur = cur.next
+        return cur
+
+    def add(self, index, value):
+        if index > 0:
+            pre = self.head
+            for i in range(index - 1):
+                pre = pre.next
+            new_node = ListNode(value)
+            new_node.next = pre.next
+            pre.next = new_node
+        elif index == 0:
+            new_node = ListNode(value)
+            new_node.next = self.head
+            self.head = new_node
+
+    def set(self, index, value):
+        cur = self.head
+        for i in range(index):
+            cur = cur.next
+        cur.val = value
+    
+    def remove(self, index):
+        if index > 0:
+            pre = self.head
+            for i in range(index - 1):
+                pre = pre.next
+            pre.next = pre.next.next
+
+        elif index == 0:
+            self.head = self.head.next
+    
+    def traverse(self):
+        cur = self.head
+        while cur is not None: # better than while cur
+            print(cur.val)
+            cur = cur.next
+
+    def is_empty(self):
+        return self.head is None
 ```
 
+
+## ⚠️ List vs. Linked List Time Explexity
+
+|--|--|--|
+| Operation | List | Linked List |
+| --- | --- | --- |
+| add(0, v) | O(n) | O(1) |
+| add(last, v) | O(1) | O(n) |
+| add / remove | O(n) | O(n) |
+| get | O(1) | O(n) |
+| set | O(1) | O(n) |
+
+### Why Are List Get / Set Operations O(1) in Python?
+A Python list is implemented as **a dynamic array.**
+
+That means:
+- All elements are stored **contiguously** in memory
+- Python knows:
+    - the starting address of the array
+    - the size of each element reference
+
+```python
+Index:   0     1     2     3     4     5
+Memory: [ * ] [ * ] [ * ] [ * ] [ * ] [ * ]  # (Each * is a reference to an object)
+Address: A   A+1   A+2   A+3   A+4   A+5
+
+nums[2] # address = base_address + i * element_size = A + 2 * element_size -> O(1)
+```
+
+- element_size: In a Python list, element_size is **the size of a reference (pointer)**, not the size of the object itself.
 
 
 
