@@ -1,6 +1,6 @@
 ---
 title: Python Basics
-date: 2025-12-03
+date: 2025-03-18
 categories: [Backend, Python]
 tags: [Python, Basics]
 author: kai

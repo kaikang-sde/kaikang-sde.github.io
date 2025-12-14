@@ -1,6 +1,6 @@
 ---
 title: Python Data Structures and Common Operations
-date: 2025-12-05
+date: 2025-03-19
 categories: [Backend, Python]
 tags: [Python, Data Structures, List, Tuple, Set, Dictionary]
 author: kai
@@ -30,7 +30,7 @@ Key characteristics:
 
 | CRUD         | Examples                  | Description |
 |--------------|---------------------------------------------------------------------------|
-| **Create**   | `nums = [1, 2, 3]` <br> `empty = []` <br> `chars = list("abc")` ->  `['a', 'b', 'c']` <br> `list_1 = [1, 12.7, True, 'hi', ['a', 'b']]`   | Several ways to create lists | 
+| **Create**   | `nums = [1, 2, 3]` <br> `empty = []` <br> `chars = list("abc")` ->  `['a', 'b', 'c']` <br> `list_1 = [1, 12.7, True, 'hi', ['a', 'b']]` <br> `list_2 = list_1[:]` -> Generate a new list with same elements   | Several ways to create lists <br> Slice operation will generate a new list(different object) | 
 |              | `a = [1, 2]` <br> `b = a + [3, 4]` ->  `[1, 2, 3, 4]` <br> `c = a * 3` ->  `[1, 2, 1, 2, 1, 2]` | `+` concatenation <br> `*` repetition <br> Not in-place operations: does not modify the original list |
 |              | `nums.append(10)` -> add to end <br> `nums.insert(1, 5)` -> insert at index <br> `nums.extend([7, 8])` -> add multiple items | Mutating creation, will modify the original list |
 | **Read**     | `for x in nums` -> iteration <br> `nums[0]` -> indexing <br> `nums[1:3]` -> slicing <br> `2 in nums` -> membership test <br> `nums.index(2)` -> index of first occurence <br> `nums.count(2)` -> count occurrences| index(x): x must be in list <br> count(x): x must be in list |
@@ -185,6 +185,14 @@ chr(ord(lower_char) - ord('a') + ord('A')) # Converting lowercase letters to upp
 |  | `str.replace('h', 'w')` -> replace all h with w <br> `str.replace('h', '')` -> remove all h| Create a new string. Does not modify the original string. |
 | | `'I am {}, and my score is {}'.format(Kai, 100)` -> I am Kai, and my score is 100. <br> `f"I am {name}, and my score is {score}"` -> I am Kai, and my score is 100. <br> `I am %s, and my score is %d % ('Kai', 100)` -> I am Kai, and my score is 100. | |
 | | `strs = ["a", "b", "c"]` <br> `" ".join(strs)` -> "a b c" <br> `"".join(strs)` -> "abc" | |
+
+
+ 
+
+
+
+
+
 
 
 
