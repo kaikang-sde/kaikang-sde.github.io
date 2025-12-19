@@ -99,8 +99,10 @@ Python Integer supports the following mathematical operations:
 
 #### / vs //
 - `/`  → True division, always returns a **float**
-- `//` → Integer/Floor division, returns the integer floor (the largest integer less than the result)
-    - floor toward negative infinity
+- `//` → Integer/Floor division, returns the integer floor (Floor(x) = the largest integer that is less than or equal to x -> The largest integer in here refers to the numerical value, not the data type)
+    - Floor toward negative infinity
+    - If either operand is a float, the result is a float
+    - If both operands are integers, the result is an integer
 
 For example:
 ```python
@@ -109,7 +111,8 @@ print(4 / 2)   # 2.0
 print(123 / 10) # 12.3
 
 print(3 // 2)   # 1 (1.5 -> floor(1.5) = 1 rounded down)
-print(123 // 10) # (12.3 -> floor(12.3) = 12 rounded down)
+print(3.0 // 2)  # 1.0 (1.5 -> floor(1.5) = 1.0 rounded down)
+print(123 // 10) # 12 (12.3 -> floor(12.3) = 12 rounded down)
 print(-7 // 4)  # -2 (-1.75 -> floor(-1.75) = -2 , because -2 < -1.75)
 ```
 
