@@ -156,7 +156,7 @@ Common escape characters:
 Internally, each character is stored as an integer, representing its Unicode value.
 
 Python provides two useful functions:
-- `ord(c)` returns the Unicode code point of a character
+- `ord(c)` returns the Unicode code(an integer) point of a character. That integer is displayed in decimal(base-10) by default, which often causes confusion.
 - `chr(n)` returns the character corresponding to a Unicode code point
 
 ```python
@@ -186,8 +186,14 @@ chr(ord(lower_char) - ord('a') + ord('A')) # Converting lowercase letters to upp
 | | `'I am {}, and my score is {}'.format(Kai, 100)` -> I am Kai, and my score is 100. <br> `f"I am {name}, and my score is {score}"` -> I am Kai, and my score is 100. <br> `I am %s, and my score is %d % ('Kai', 100)` -> I am Kai, and my score is 100. | |
 | | `strs = ["a", "b", "c"]` <br> `" ".join(strs)` -> "a b c" <br> `"".join(strs)` -> "abc" | |
 
-
- 
+- Combine strings: `+` -> `str = 'ab' + 'cd' -> 'abcd'`
+- Get the length of a string: `len()` -> `len(str) -> 4`
+- Get the character at index: `str[index]` -> `str[2] -> 'c'`
+- Get the substring: `str[start:end]` -> `str[1:3] -> 'bc'`
+- Find a substring: `str.find("substring")` -> `str.find("bc") -> 1`
+- Replace a substring: `str.replace("substring", "new_substring")` -> `str.replace("bc", "xy") -> 'axyd'`
+- Number to string: `str(number)` -> `str(3.14) -> '3.14'`
+- String to number: `int(str)` or `float(str)` -> `int("100") -> 100` or `float("3.14") -> 3.14`
 
 
 
